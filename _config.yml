@@ -14,7 +14,7 @@ github_repo: "blog"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "http://robmarkcole.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://robmarkcole.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
@@ -34,13 +34,13 @@ url: "http://robmarkcole.com/" # the base hostname & protocol for your site, e.g
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/blog" # the subpath of your site, e.g. "/blog".
+baseurl: "" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    twitter: robmarkcole
+    github: robmarkcole
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -72,9 +72,9 @@ include:
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
-  binder: true
+#   binder: true
   colab: true
-  deepnote: true
+#   deepnote: true
 
 # Escape HTML in post descriptions
 html_escape:
