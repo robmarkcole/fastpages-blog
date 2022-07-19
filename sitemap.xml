@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://robmarkcole.com//blog/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://robmarkcole.com/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://robmarkcole.com//blog/jupyter/2020/02/20/test.html</loc>
+<loc>https://robmarkcole.com/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://robmarkcole.com//blog/about/</loc>
+<loc>https://robmarkcole.com/about/</loc>
 </url>
 <url>
-<loc>http://robmarkcole.com//blog/</loc>
+<loc>https://robmarkcole.com/</loc>
 </url>
 <url>
-<loc>http://robmarkcole.com//blog/search/</loc>
+<loc>https://robmarkcole.com/search/</loc>
 </url>
 <url>
-<loc>http://robmarkcole.com//blog/categories/</loc>
+<loc>https://robmarkcole.com/categories/</loc>
 </url>
 </urlset>
