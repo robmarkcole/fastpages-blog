@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+My background is in optical physics, and I hold a PhD from the [NanoPhotonics group at Cambridge](https://www.np.phy.cam.ac.uk/) on the topic of surface plasmons. Since academia I have held a variety of roles in industry, including as a researcher at the former Sharp Labs of Europe, and later as an engineer of optical systems at [Surrey Satellites](https://www.sstl.co.uk/). Over time I have gravitated towards data science and deep learning with python, and I now work as a senior data scientist at [Satellite Vu](https://www.satellitevu.com/). If you find my work useful please give it a star and consider sponsoring it. You can also follow me on the platforms below. Thanks!
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[![Twitter Follow](https://img.shields.io/twitter/follow/robmarkcole?label=Follow)](https://twitter.com/robmarkcole)
+[![Linkedin: robmarkcole](https://img.shields.io/badge/-Robin%20Cole-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/robmarkcole/)](https://www.linkedin.com/in/robmarkcole/)
+[![Google Scholar Badge](https://img.shields.io/badge/Google-Scholar-red)](https://scholar.google.com/citations?user=oHe5ozwAAAAJ&hl=en)
