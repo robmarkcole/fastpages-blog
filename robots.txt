@@ -1,1 +1,1 @@
-Sitemap: https://robmarkcole.com/sitemap.xml
+Sitemap: https://robmarkcole.com/blog/sitemap.xml
