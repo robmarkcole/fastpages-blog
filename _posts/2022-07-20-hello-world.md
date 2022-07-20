@@ -12,8 +12,3 @@ show_image: true
 Images do not preview if local
 
 ![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
-
-But we can reference from Github, and they should then be displayed in TOC
-
-![](https://github.com/robmarkcole/blog/blob/master/images/hello/hello.jpg "Credit: The internet")
-
