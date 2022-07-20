@@ -9,14 +9,11 @@ show_image: true
 ---
 # Hello world
 
-Images do not preview
+Images do not preview if local
 
 ![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
 
-Python code and output:
+But we can reference from Github, and they should then be displayed in TOC
 
-```python
-# Prints '2'
-print(1+1)
-```
+![](https://github.com/robmarkcole/blog/blob/master/images/hello/hello.jpg "Credit: The internet")
 
