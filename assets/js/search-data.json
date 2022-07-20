@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Hello world",
-            "content": "Hello world . Images do not preview if local . . But we can reference from Github, and they should then be displayed in TOC . .",
+            "content": "Hello world . Images do not preview if local . .",
             "url": "https://robmarkcole.com/markdown/2022/07/20/hello-world.html",
             "relUrl": "/markdown/2022/07/20/hello-world.html",
             "date": " • Jul 20, 2022"
