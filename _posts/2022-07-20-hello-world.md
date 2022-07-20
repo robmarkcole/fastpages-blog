@@ -4,7 +4,7 @@ description: "A minimal hello world"
 layout: post
 categories: [markdown]
 toc: true
-image: images/hello/hello.jpeg
+image: images/hello/hello.jpg
 show_image: true
 ---
 # Hello world
