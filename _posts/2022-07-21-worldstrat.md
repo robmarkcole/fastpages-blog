@@ -13,7 +13,7 @@ hide: false
 A new dataset called the WorldStrat dataset was this week [announced on Twitter](https://twitter.com/JCornebise/status/1549356696664956928?s=20&t=0vTPK4qaRNRtx3YCHpA7Rg) by Julien Cornebise and colleagues. The release includes code on Github, a paper on arXiv, and the dataset itself on both Zenodo (full dataset) and on Kaggle. This dataset is significant for a number of reasons:
 
 - Large volume of imagery with global coverage
-- Sentinel 2 & high resoluton SPOT imagery providing 10 & 1.5 m/pixel respectively
+- Sentinel 2 timeseries & colocated high resoluton Airbus SPOT imagery providing 10 & 1.5 m/pixel respectively
 
 ## The code
 The [code on Github](https://github.com/worldstrat/worldstrat) allows anyone to rebuild or extend the WorldStrat dataset. Additionally it includes baeline algorithms & model implementation details to perform super resolution, and a number of tutorials.
