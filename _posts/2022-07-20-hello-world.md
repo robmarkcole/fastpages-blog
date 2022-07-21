@@ -6,6 +6,7 @@ categories: [markdown]
 toc: true
 image: images/hello/hello.jpg
 show_image: true
+hide: true
 ---
 # Hello world
 
