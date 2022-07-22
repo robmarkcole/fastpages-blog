@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Blog of Robin Cole
-description: My blog
+description:
 github_username: robmarkcole
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
@@ -59,9 +59,7 @@ annotations: false
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: 
-
-comments: true
+google_analytics:
 
 exclude:
   - docker-compose.yml
