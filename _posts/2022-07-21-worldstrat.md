@@ -10,9 +10,9 @@ hide: false
 ---
 # The WorldStrat Dataset
 
-A new dataset called the WorldStrat dataset was this week [announced on Twitter](https://twitter.com/JCornebise/status/1549356696664956928?s=20&t=0vTPK4qaRNRtx3YCHpA7Rg) by Julien Cornebise and colleagues. The release includes a paper on arXiv[^1], code on Github[^2]:, and the dataset itself on both Zenodo[^2] and Kaggle. 
+A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv[^1], code on Github[^2]:, and the dataset itself on both Zenodo[^3] and Kaggle[^4]. 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Proud to release the WorldStrat dataset with <a href="https://twitter.com/ivanorsolic?ref_src=twsrc%5Etfw">@ivanorsolic</a> <a href="https://twitter.com/alkalait?ref_src=twsrc%5Etfw">@alkalait</a> and <a href="https://twitter.com/esa?ref_src=twsrc%5Etfw">@esa</a> Φ-lab:<br>- ~10,000 km² of high-res SPOT satellite imagery<br>- Multi-temporal matched low-res Sentinel2 images<br>- Stratified wrt global land-uses<br>- Enriched with sites under-represented in ML<br>🧵1/9 <a href="https://t.co/kR0AnzIlkg">pic.twitter.com/kR0AnzIlkg</a></p>&mdash; Julien Cornebise (@JCornebise) <a href="https://twitter.com/JCornebise/status/1549356696664956928?ref_src=twsrc%5Etfw">July 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Proud to release the WorldStrat dataset with <a href="https://twitter.com/ivanorsolic?ref_src=twsrc%5Etfw">@ivanorsolic</a> <a href="https://twitter.com/alkalait?ref_src=twsrc%5Etfw">@alkalait</a> and <a href="https://twitter.com/esa?ref_src=twsrc%5Etfw">@esa</a> Φ-lab:<br>- ~10,000 km² of high-res SPOT satellite imagery<br>- Multi-temporal matched low-res Sentinel2 images<br>- Stratified wrt global land-uses<br>- Enriched with sites under-represented in ML<br>🧵1/9 <a href="https://t.co/kR0AnzIlkg">pic.twitter.com/kR0AnzIlkg</a></p>&mdash; Julien Cornebise (@JCornebise) <a href="https://twitter.com/JCornebise/status/1549356696664956928?ref_src=twsrc%5Etfw">July 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 This dataset is significant for a number of reasons:
 
