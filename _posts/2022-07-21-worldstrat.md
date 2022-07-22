@@ -10,7 +10,9 @@ hide: false
 ---
 # The WorldStrat Dataset
 
-A new dataset called the WorldStrat dataset was this week [announced on Twitter](https://twitter.com/JCornebise/status/1549356696664956928?s=20&t=0vTPK4qaRNRtx3YCHpA7Rg) by Julien Cornebise and colleagues. The release includes a paper on arXiv, code on Github, and the dataset itself on both Zenodo and Kaggle. This dataset is significant for a number of reasons:
+A new dataset called the WorldStrat dataset was this week [announced on Twitter](https://twitter.com/JCornebise/status/1549356696664956928?s=20&t=0vTPK4qaRNRtx3YCHpA7Rg) by Julien Cornebise and colleagues. The release includes a paper on arXiv, code on Github, and the dataset itself on both Zenodo and Kaggle (links at the end of this post). 
+
+This dataset is significant for a number of reasons:
 
 - Greater than 100 GB of imagery with global coverage
 - Covers locations typically under-represented in ML datasets
@@ -21,10 +23,6 @@ A new dataset called the WorldStrat dataset was this week [announced on Twitter]
 The dataset comprises Sentinel 2 timeseries & colocated high resoluton Airbus SPOT imagery providing 10 & 1.5 m/pixel respectively. A couple of examples are shown below:
 
 ![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg "Fields" )
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg" width="650">
-</p>
 
 ## Super resolution
 The colocated low and high resolution imagery enables the training of super resolution models
