@@ -19,6 +19,8 @@ A new dataset called the WorldStrat dataset was this week [announced on Twitter]
 
 The dataset comprises Sentinel 2 timeseries & colocated high resoluton Airbus SPOT imagery providing 10 & 1.5 m/pixel respectively. A couple of examples are shown below:
 
+![](https://github.com/howard-haowen/blog.ai/raw/master/images/reinvent-the-wheel.jpg "Credit: JohnHartStudio.com")
+
 ![](https://github.com/robmarkcole/blog/blob/master/images/worldstrat/pair1.png)
 *Fields*
 
