@@ -40,7 +40,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": ". My background is in optical physics, and I hold a PhD from the NanoPhotonics group at Cambridge on the topic of surface plasmons. Since academia I have held a variety of roles in industry, including as a researcher at the former Sharp Labs of Europe, and later as an engineer of optical systems at Surrey Satellites. Over time I have gravitated towards data science and deep learning with python, and I now work as a senior data scientist at Satellite Vu. If you find my work useful please give it a star and consider sponsoring it. You can also follow me on the platforms below. Thanks! .",
+          "content": ". My background is in optical physics, and I hold a PhD from the NanoPhotonics group at Cambridge on the topic of surface plasmons. Since academia I have held a variety of roles in industry, including as a researcher at the former Sharp Labs of Europe, and later as an engineer of optical systems at Surrey Satellites. Over time I have gravitated towards data science and deep learning with python, and I now work as a senior data scientist at Satellite Vu. .",
           "url": "https://robmarkcole.com/about/",
           "relUrl": "/about/",
           "date": ""
