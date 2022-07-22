@@ -20,7 +20,7 @@ This dataset is significant for a number of reasons:
 - Code provided to extend the dataset
 - Models & tutorials provided
 
-The dataset comprises Sentinel 2 timeseries & colocated high resoluton Airbus SPOT imagery providing 10 & 1.5 m/pixel respectively. A couple of examples are shown below:
+The dataset comprises Sentinel 2 timeseries & colocated high resoluton Airbus SPOT imagery providing 10 & 1.5 m/pixel respectively. An example is shown below:
 
 ![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg "Fields" )
 
