@@ -13,14 +13,14 @@
 <link rel="canonical" href="https://robmarkcole.com/markdown/2022/07/21/worldstrat.html" />
 <meta property="og:url" content="https://robmarkcole.com/markdown/2022/07/21/worldstrat.html" />
 <meta property="og:site_name" content="Blog of Robin Cole" />
-<meta property="og:image" content="https://robmarkcole.com/images/worldstrat/main.png" />
+<meta property="og:image" content="https://robmarkcole.com/images/worldstrat/main.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-07-21T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://robmarkcole.com/images/worldstrat/main.png" />
+<meta property="twitter:image" content="https://robmarkcole.com/images/worldstrat/main.jpg" />
 <meta property="twitter:title" content="The WorldStrat Dataset" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-21T00:00:00-05:00","datePublished":"2022-07-21T00:00:00-05:00","description":"Quick tour of the WorldStrat dataset","headline":"The WorldStrat Dataset","image":"https://robmarkcole.com/images/worldstrat/main.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/07/21/worldstrat.html"},"url":"https://robmarkcole.com/markdown/2022/07/21/worldstrat.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-21T00:00:00-05:00","datePublished":"2022-07-21T00:00:00-05:00","description":"Quick tour of the WorldStrat dataset","headline":"The WorldStrat Dataset","image":"https://robmarkcole.com/images/worldstrat/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/07/21/worldstrat.html"},"url":"https://robmarkcole.com/markdown/2022/07/21/worldstrat.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://robmarkcole.com/feed.xml" title="Blog of Robin Cole" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -111,6 +111,7 @@ window.onload = wrap_img;
 
 <ul>
   <li>Greater than 100 GB of imagery with global coverage</li>
+  <li>Covers locations typically under-represented in ML datasets</li>
   <li>Colocated low and high resolution imagery</li>
   <li>Code provided to extend the dataset</li>
   <li>Models &amp; tutorials provided</li>
@@ -118,12 +119,11 @@ window.onload = wrap_img;
 
 <p>The dataset comprises Sentinel 2 timeseries &amp; colocated high resoluton Airbus SPOT imagery providing 10 &amp; 1.5 m/pixel respectively. A couple of examples are shown below:</p>
 
-<p><img src="https://github.com/howard-haowen/blog.ai/raw/master/images/reinvent-the-wheel.jpg" alt="" title="Credit: JohnHartStudio.com"></p>
+<p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg" alt="" title="Fields"></p>
 
-<p><img src="https://github.com/robmarkcole/blog/blob/master/images/worldstrat/pair1.png" alt="">
-<em>Fields</em></p>
-
-<p><img src="https://github.com/robmarkcole/blog/blob/master/images/worldstrat/pair2.png" alt="" title="Urban"></p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg" width="650">
+</p>
 
 <h2 id="super-resolution">
 <a class="anchor" href="#super-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Super resolution</h2>
