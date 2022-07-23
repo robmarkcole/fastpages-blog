@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -100,6 +100,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#the-worldstrat-dataset">The WorldStrat Dataset</a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#getting-started">Getting started</a></li>
 <li class="toc-entry toc-h2"><a href="#super-resolution">Super resolution</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
@@ -119,7 +120,7 @@ window.onload = wrap_img;
 <ul>
   <li>Greater than 100 GB of imagery with global coverage</li>
   <li>Covers locations typically under-represented in ML datasets</li>
-  <li>Colocated low and high resolution imagery</li>
+  <li>Colocated low and high resolution imagery enables training of super resolution models</li>
   <li>Code provided to extend the dataset</li>
   <li>Models &amp; tutorials provided</li>
 </ul>
@@ -127,6 +128,19 @@ window.onload = wrap_img;
 <p>The dataset comprises Sentinel 2 timeseries &amp; colocated high resoluton Airbus SPOT imagery providing 10 &amp; 1.5 m/pixel respectively. An example is shown below:</p>
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg" alt="" title="Fields"></p>
+
+<h2 id="getting-started">
+<a class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started</h2>
+<p>I followed the instructions in the repository readme and downloaded the smaller dataset from Kaggle. The zipped Kaggle dataset is 53GB and even on a fast internet connection, the download took 3-4 hours. Alternatively I could have just created a notebook on Kaggle itself, and would not have needed to wait for a download. I began by running the <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Exploration.ipynb">Dataset Exploration.ipynb</a> notebook, which gives an introduction to the dataset. Interestingly the imagery locations were suggested by several organisations:</p>
+
+<ul>
+  <li>22 × 22.5km² images of Amnesty provided locations or 198 × 2.5km² images.</li>
+  <li>39 × 22.5km² images of ASMSpotter provided locations or 351 × 2.5km² images.</li>
+  <li>981 × 2.5km² images of UNHCR provided locations.</li>
+  <li>2,407 × 2.5km² images of randomly sampled/stratified locations.</li>
+</ul>
+
+<p>Several maps are generated using <a href="http://python-visualization.github.io/folium/">folium</a> which show the capture location of the images. The image metadata is visualised in a pandas dataframe, and includes lat/lon, the source (e.g. Amnesty, UNHCR etc.) and a description field. Some very interesting locations are included, such as <code class="language-plaintext highlighter-rouge">Camp 25, North Korea- Gulag</code>, <code class="language-plaintext highlighter-rouge">USA - migrant camps on border</code> and <code class="language-plaintext highlighter-rouge">Brazil-Jaci_Deforestation_Cattle</code></p>
 
 <h2 id="super-resolution">
 <a class="anchor" href="#super-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Super resolution</h2>
@@ -144,10 +158,10 @@ window.onload = wrap_img;
       <p>Code <a href="https://github.com/worldstrat/worldstrat">on Github</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:3" role="doc-endnote">
-      <p>The full 107 GB dataset is <a href="https://zenodo.org/record/6810792#.YtjNb-zMK3I">hosted on Zenodo</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>The full dataset is <a href="https://zenodo.org/record/6810792#.YtjNb-zMK3I">hosted on Zenodo</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:4" role="doc-endnote">
-      <p>A 53 GB version of the dataset <a href="https://www.kaggle.com/datasets/jucor1/worldstrat">is on Kaggle</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>A smaller version of the dataset <a href="https://www.kaggle.com/datasets/jucor1/worldstrat">is on Kaggle</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
