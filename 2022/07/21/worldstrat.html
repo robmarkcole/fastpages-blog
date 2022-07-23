@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Quick tour of the WorldStrat dataset" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The WorldStrat Dataset" />
-<meta property="og:description" content="The WorldStrat Dataset" />
+<meta name="description" content="A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv1, code on Github2, and the dataset itself on both Zenodo3 and Kaggle4. Paper on arXiv &#8617; Code on Github &#8617; The full 107 GB dataset is hosted on Zenodo &#8617; A 53 GB version of the dataset is on Kaggle. &#8617;" />
+<meta property="og:description" content="A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv1, code on Github2, and the dataset itself on both Zenodo3 and Kaggle4. Paper on arXiv &#8617; Code on Github &#8617; The full 107 GB dataset is hosted on Zenodo &#8617; A 53 GB version of the dataset is on Kaggle. &#8617;" />
 <link rel="canonical" href="https://robmarkcole.com/2022/07/21/worldstrat.html" />
 <meta property="og:url" content="https://robmarkcole.com/2022/07/21/worldstrat.html" />
 <meta property="og:site_name" content="Blog of Robin Cole" />
@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://robmarkcole.com/images/worldstrat/main.jpg" />
 <meta property="twitter:title" content="Quick tour of the WorldStrat dataset" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-21T00:00:00-05:00","datePublished":"2022-07-21T00:00:00-05:00","description":"The WorldStrat Dataset","headline":"Quick tour of the WorldStrat dataset","image":"https://robmarkcole.com/images/worldstrat/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/2022/07/21/worldstrat.html"},"url":"https://robmarkcole.com/2022/07/21/worldstrat.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-21T00:00:00-05:00","datePublished":"2022-07-21T00:00:00-05:00","description":"A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv1, code on Github2, and the dataset itself on both Zenodo3 and Kaggle4. Paper on arXiv &#8617; Code on Github &#8617; The full 107 GB dataset is hosted on Zenodo &#8617; A 53 GB version of the dataset is on Kaggle. &#8617;","headline":"Quick tour of the WorldStrat dataset","image":"https://robmarkcole.com/images/worldstrat/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/2022/07/21/worldstrat.html"},"url":"https://robmarkcole.com/2022/07/21/worldstrat.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://robmarkcole.com/feed.xml" title="Blog of Robin Cole" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -90,9 +90,7 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="the-worldstrat-dataset">The WorldStrat Dataset</h1>
-
-<p>A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, code on Github<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, and the dataset itself on both Zenodo<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and Kaggle<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</p>
+    <p>A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, code on Github<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, and the dataset itself on both Zenodo<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and Kaggle<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</p>
 
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Proud to release the WorldStrat dataset with <a href="https://twitter.com/ivanorsolic?ref_src=twsrc%5Etfw">@ivanorsolic</a> <a href="https://twitter.com/alkalait?ref_src=twsrc%5Etfw">@alkalait</a> and <a href="https://twitter.com/esa?ref_src=twsrc%5Etfw">@esa</a> Φ-lab:<br />- ~10,000 km² of high-res SPOT satellite imagery<br />- Multi-temporal matched low-res Sentinel2 images<br />- Stratified wrt global land-uses<br />- Enriched with sites under-represented in ML<br />🧵1/9 <a href="https://t.co/kR0AnzIlkg">pic.twitter.com/kR0AnzIlkg</a></p>&mdash; Julien Cornebise (@JCornebise) <a href="https://twitter.com/JCornebise/status/1549356696664956928?ref_src=twsrc%5Etfw">July 19, 2022</a></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -111,10 +109,10 @@ window.onload = wrap_img;
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg" alt="" title="Fields" /></p>
 
-<h2 id="super-resolution">Super resolution</h2>
+<h3 id="super-resolution">Super resolution</h3>
 <p>The colocated low and high resolution imagery enables the training of super resolution models</p>
 
-<h2 id="footnotes">Footnotes</h2>
+<h3 id="footnotes">Footnotes</h3>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
