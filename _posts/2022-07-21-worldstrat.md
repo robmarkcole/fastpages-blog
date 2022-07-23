@@ -1,12 +1,14 @@
 ---
-title: "Quick tour of the WorldStrat dataset"
-description:
+title: "The WorldStrat Dataset"
+description: "Quick tour of the WorldStrat dataset"
 layout: post
-toc: false
+categories: [markdown]
+toc: true
 image: images/worldstrat/main.jpg
 show_image: true
 hide: false
 ---
+# The WorldStrat Dataset
 
 A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv[^1], code on Github[^2], and the dataset itself on both Zenodo[^3] and Kaggle[^4]. 
 
@@ -24,10 +26,10 @@ The dataset comprises Sentinel 2 timeseries & colocated high resoluton Airbus SP
 
 ![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/fields.jpg "Fields" )
 
-### Super resolution
+## Super resolution
 The colocated low and high resolution imagery enables the training of super resolution models
 
-### Footnotes
+## Footnotes
 [^1]: Paper on [arXiv](https://arxiv.org/abs/2207.06418)
 [^2]: Code [on Github](https://github.com/worldstrat/worldstrat)
 [^3]: The full 107 GB dataset is [hosted on Zenodo](https://zenodo.org/record/6810792#.YtjNb-zMK3I)
