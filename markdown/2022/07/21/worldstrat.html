@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -103,6 +103,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#getting-started">Getting started</a></li>
 <li class="toc-entry toc-h2"><a href="#extending-the-dataset">Extending the dataset</a></li>
 <li class="toc-entry toc-h2"><a href="#super-resolution">Super resolution</a></li>
+<li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
@@ -124,6 +125,7 @@ window.onload = wrap_img;
   <li>Colocated low and high resolution imagery enables training of super resolution models</li>
   <li>Code provided to extend the dataset</li>
   <li>Models &amp; tutorials provided</li>
+  <li>Licenses covering non commercial use</li>
 </ul>
 
 <p>The dataset comprises Sentinel 2 timeseries &amp; colocated high resoluton Airbus SPOT imagery providing 10 &amp; 1.5 m/pixel respectively. An example is shown below:</p>
@@ -153,9 +155,15 @@ window.onload = wrap_img;
 
 <h2 id="super-resolution">
 <a class="anchor" href="#super-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Super resolution</h2>
-<p>One of the stated aims of releasing this dataset was to enable the training of super resolution models. The hope is that by super resolving free Sentinel imagery, researchers without the budget for purchasing high resolutuion imagery (e.g. SPOT) can use super resolved &amp; free Sentinel imagery. Training super resolution models generally requires colocated low and high resolution imagery. One strategy often used is to downsample high resolution imagery to low resolution, and use these pairs for training. For example a 1.5m spot image could be downsampled to 10m and used to train a model that could then be applied to 10m Sentinel 2 imagery. However with this approach has a disadvantages; firstly the downsampled imagery may have different characteristics from the imagery you will use in practice, leading to unsatisfactory performance in real applications. Secondly, single imager super resolution (SISR) generally is outperformed my multi image super resolution (MISR), and creating a MISR dataset from high resoltuion imagery alone would multiply your costs significantly. Fortunately the WorldStrat dataset provides both imagery from the two satellites, and multiple frames from Sentinel 2, enabling the training of MISR super resolution models (as well as SISR).</p>
+<p>One of the stated aims of releasing this dataset was to enable the training of super resolution models. The hope is that by super resolving free Sentinel imagery, researchers without the budget for purchasing high resolutuion imagery (e.g. SPOT) can use super resolved &amp; free Sentinel imagery. Training super resolution models generally requires colocated low and high resolution imagery. One strategy often used is to downsample high resolution imagery to low resolution, and use these pairs for training. For example a 1.5m spot image could be downsampled to 10m and used to train a model that could then be applied to 10m Sentinel 2 imagery. However with this approach has a disadvantages; firstly the downsampled imagery may have different characteristics from the imagery you will use in practice, leading to unsatisfactory performance in real applications. Secondly, single imager super resolution (SISR) generally is outperformed my multi image super resolution (MISR), and creating a MISR dataset from high resoltuion imagery alone would multiply your costs significantly. Fortunately the WorldStrat dataset provides both imagery from the two satellites, and multiple frames from Sentinel 2, enabling the training of MISR super resolution models (as well as SISR). The Github code includes script for training super resolution models and an example output is shown below:</p>
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/SR.jpg" alt="" title="Super resolution example"></p>
+
+<p>The notebook <a href="https://github.com/worldstrat/worldstrat/blob/main/Training.ipynb">Training.ipynb</a> demonstrates how to run the training script. Whilst in general training is performed on a Linux machine, the authors have very helpfully included arguments if you wanted to perform training on a Windows machine. The code itself is written in python and uses pytorch and pytorch-lightning for the model and training loop. The code also includes logging of training metrics to Weights &amp; Biases. The models themselves are relatively lightweight and it is suggested that training the MISR model will take 45 min - 1.5 hr on a single GPU instance. This should be within the limitations of Kaggle GPU instances so if you are interested in training the model yourself I would recommend beggining there. Note that a pretrained model is supplied in the Github repository and its use is shown in the <a href="https://github.com/worldstrat/worldstrat/blob/main/Inference.ipynb">Inference.ipynb</a> notebook. Note that you will not require a GPU if you only want to perform inference. If you want to read more about super resolution see the links in my satellite-image-deep-learning Github repository <a href="https://github.com/robmarkcole/satellite-image-deep-learning#super-resolution">here</a>.</p>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+<p>Overall I am very impressed by both the size and global nature of the dataset, the quality of the documentation and code, and the level of thought that has gone into its preparation. Datasets often focus on a particular part of the world (USA mostly) and are often released without clear documentation on how they were produced, making them hard to extend.</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
