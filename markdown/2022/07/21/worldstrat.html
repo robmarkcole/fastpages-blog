@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -101,6 +101,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#the-worldstrat-dataset">The WorldStrat Dataset</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#getting-started">Getting started</a></li>
+<li class="toc-entry toc-h2"><a href="#extending-the-dataset">Extending the dataset</a></li>
 <li class="toc-entry toc-h2"><a href="#super-resolution">Super resolution</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul>
@@ -131,7 +132,7 @@ window.onload = wrap_img;
 
 <h2 id="getting-started">
 <a class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started</h2>
-<p>I followed the instructions in the repository readme and downloaded the smaller dataset from Kaggle. The zipped Kaggle dataset is 53GB and even on a fast internet connection, the download took 3-4 hours. Alternatively I could have just created a notebook on Kaggle itself, and would not have needed to wait for a download. I began by running the <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Exploration.ipynb">Dataset Exploration.ipynb</a> notebook, which gives an introduction to the dataset. Interestingly the imagery locations were suggested by several organisations:</p>
+<p>I followed the instructions in the repository readme and downloaded the smaller dataset from Kaggle via the web UI. The zipped Kaggle dataset is 53GB, and even on a fast internet connection the download took 3-4 hours<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>. I began by running the <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Exploration.ipynb">Dataset Exploration.ipynb</a> notebook, which gives an introduction to the dataset. Interestingly the imagery locations were suggested by several organisations:</p>
 
 <ul>
   <li>22 × 22.5km² images of Amnesty provided locations or 198 × 2.5km² images.</li>
@@ -140,11 +141,21 @@ window.onload = wrap_img;
   <li>2,407 × 2.5km² images of randomly sampled/stratified locations.</li>
 </ul>
 
-<p>Several maps are generated using <a href="http://python-visualization.github.io/folium/">folium</a> which show the capture location of the images. The image metadata is visualised in a pandas dataframe, and includes lat/lon, the source (e.g. Amnesty, UNHCR etc.) and a description field. Some very interesting locations are included, such as <code class="language-plaintext highlighter-rouge">Camp 25, North Korea- Gulag</code>, <code class="language-plaintext highlighter-rouge">USA - migrant camps on border</code> and <code class="language-plaintext highlighter-rouge">Brazil-Jaci_Deforestation_Cattle</code></p>
+<p>Several maps are generated using <a href="http://python-visualization.github.io/folium/">folium</a> which show the capture location of the images. The image metadata is visualised in a pandas dataframe, and includes lat/lon, the source (e.g. Amnesty, UNHCR etc.) and a description field. Some very interesting locations are included, such as <code class="language-plaintext highlighter-rouge">Camp 25, North Korea- Gulag</code>, <code class="language-plaintext highlighter-rouge">USA - migrant camps on border</code> and <code class="language-plaintext highlighter-rouge">Brazil-Jaci_Deforestation_Cattle</code>. Given the provided metadata you could at this point start curating the dataset, say if you were interested in generating a version of the dataset focussed on a particular geography.</p>
+
+<p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/map.jpg" alt="" title="Example map generated in Dataset Exploration.ipynb"></p>
+
+<h2 id="extending-the-dataset">
+<a class="anchor" href="#extending-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extending the dataset</h2>
+<p>The notebook <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Generation.ipynb">Dataset Generation.ipynb</a> shows how the dataset was created, and is the starting point if you want to extend the dataset yourself. To do this you can either supply a table of specific points to sample (as a csv or geojson) <strong>or</strong> you can uniformly sample the planet. There is an interesting dicussion on the challenges of random sampling and a mitigating strategy is provided.</p>
+
+<p>To discover available imagery you will need a SentinelHub account, and <a href="https://www.sentinel-hub.com/trial">you can get a free 30-day trial account here</a>. Clearly it might take some searching and good luck to locate imagery from the two satellites, over your area of interest, and within a short time window. Fortunately code is provided to assist with searching &amp; filtering the imagery. Note that only Sentinel 2 imagery can be downloaded for free, and SPOT imagery must be purchased from Airbus. Fortunately the purchase can be performed through SentinelHub and looks pretty straightforward. Code is also provided for downloading your ordered imagery, so the whole process from discovery to ingestion of data is very well documented.</p>
 
 <h2 id="super-resolution">
 <a class="anchor" href="#super-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Super resolution</h2>
-<p>The colocated low and high resolution imagery enables the training of super resolution models</p>
+<p>One of the stated aims of releasing this dataset was to enable the training of super resolution models. The hope is that by super resolving free Sentinel imagery, researchers without the budget for purchasing high resolutuion imagery (e.g. SPOT) can use super resolved &amp; free Sentinel imagery. Training super resolution models generally requires colocated low and high resolution imagery. One strategy often used is to downsample high resolution imagery to low resolution, and use these pairs for training. For example a 1.5m spot image could be downsampled to 10m and used to train a model that could then be applied to 10m Sentinel 2 imagery. However with this approach has a disadvantages; firstly the downsampled imagery may have different characteristics from the imagery you will use in practice, leading to unsatisfactory performance in real applications. Secondly, single imager super resolution (SISR) generally is outperformed my multi image super resolution (MISR), and creating a MISR dataset from high resoltuion imagery alone would multiply your costs significantly. Fortunately the WorldStrat dataset provides both imagery from the two satellites, and multiple frames from Sentinel 2, enabling the training of MISR super resolution models (as well as SISR).</p>
+
+<p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/SR.jpg" alt="" title="Super resolution example"></p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
@@ -162,6 +173,9 @@ window.onload = wrap_img;
     </li>
     <li id="fn:4" role="doc-endnote">
       <p>A smaller version of the dataset <a href="https://www.kaggle.com/datasets/jucor1/worldstrat">is on Kaggle</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Alternatively I could have just created a notebook on Kaggle itself, and would not have needed to wait for a download. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
