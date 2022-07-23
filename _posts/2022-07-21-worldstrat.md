@@ -6,7 +6,7 @@ categories: [markdown]
 toc: true
 image: images/worldstrat/main.jpg
 show_image: true
-hide: false
+hide: true
 ---
 # The WorldStrat Dataset
 
