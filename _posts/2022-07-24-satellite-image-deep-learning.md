@@ -4,7 +4,7 @@ description: "How I maintain the popular Github repo and why you should create s
 layout: post
 categories: [markdown]
 toc: true
-image: images/awesome/main.jpg
+image: images/satellite-image-deep-learning/main.jpg
 show_image: true
 hide: false
 ---
