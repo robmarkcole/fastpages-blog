@@ -7,6 +7,7 @@ toc: true
 image: images/satellite-image-deep-learning/sat.jpg
 show_image: true
 hide: false
+comments: true
 ---
 ## Introduction
 I maintain a popular repository on Github called the satellite-image-deep-learning[^1], currently sitting close to 4k stars. The repository basically lists useful references I have found related to satellite imagery and deep learning, but also goes beyond this to include sections on deploying machine learning models, and even a section on 'movers and shakers' on Github. This post provides the brief history of this repository, how I find material, and why you should create something similar. A screenshot of the repository is shown below:
