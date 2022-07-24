@@ -9,7 +9,7 @@ show_image: true
 hide: false
 ---
 ## Introduction
-I maintain a popular repository on Github called the satellite-image-deep-learning[^1], currently sitting close to 4k stars. The repository basically lists useful references I have found related to satellite imagery and deep learning, but also goes beyond this to include sections on deploying machine learning models, and even a secton on 'movers and shakers' on Github. This post provides the background to this repository, how I maintain & develop it, and why you should create something similar. A screenshot of the repository is shown below:
+I maintain a popular repository on Github called the satellite-image-deep-learning[^1], currently sitting close to 4k stars. The repository basically lists useful references I have found related to satellite imagery and deep learning, but also goes beyond this to include sections on deploying machine learning models, and even a secton on 'movers and shakers' on Github. This post provides the brief history of this repository, how I find material, and why you should create something similar. A screenshot of the repository is shown below:
 
 ![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/main.jpg "The repository on Github")
 
@@ -23,6 +23,9 @@ Naturally machine learning was suggested, and I was given two days to do a POC[^
 ```
 
 Over time I have added more structure to the README, and added a Github action to check the validity of links, but otherwise the approach remains as simple as when I first conceived it. After leaving SSTL I moved on to other projects on Github (mostly adding extensions and integrations to Home-Assistant[^7]) but was suprised to see after a couple of years that satellite-image-deep-learning had become my most popular work by star count. In Jan 2021 I joined Satellite Vu[^8] and naturally my interest in satellite imagery took center stage once more. At this point I decided to put most of my open source enrgy into this repository, and it has grown from strenght to strength from this point onwards.
+
+## Finding material
+Many people have asked me how I find the material listed on satellite-image-deep-learning, and the answer is that for the most part it is found for me! Specifically, it is recommended in my Github feed as I have followed the right core group of developers & academics who are responsible for much of the most high profile works listed on the repository. These people also star and fork other work which is then highlighted in my feed.  
 
 
 ## Summary
