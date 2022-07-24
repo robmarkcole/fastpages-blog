@@ -1,6 +1,6 @@
 ---
 title: "Dissecting the satellite-image-deep-learning repo"
-description: "How I maintain the popular Github repo and why you should create something similar"
+description: "A brief history of the popular Github repo and why you should create something similar"
 layout: post
 categories: [markdown]
 toc: true
