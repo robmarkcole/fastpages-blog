@@ -8,7 +8,7 @@ image: images/worldstrat/main.jpg
 show_image: true
 hide: true
 ---
-# The WorldStrat Dataset
+## Introduction
 
 A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv[^1], code on Github[^2], and the dataset itself on both Zenodo[^3] and Kaggle[^4]. 
 
