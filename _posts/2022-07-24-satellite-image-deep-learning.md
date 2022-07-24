@@ -25,11 +25,25 @@ Naturally machine learning was suggested, and I was given two days to do a POC[^
 Over time I have added more structure to the README, and added a Github action to check the validity of links, but otherwise the approach remains as simple as when I first conceived it. After leaving SSTL I moved on to other projects on Github (mostly adding extensions and integrations to Home-Assistant[^7]) but was suprised to see after a couple of years that satellite-image-deep-learning had become my most popular work by star count. In Jan 2021 I joined Satellite Vu[^8] and naturally my interest in satellite imagery took center stage once more. At this point I decided to put most of my open source enrgy into this repository, and it has grown from strenght to strength from this point onwards.
 
 ## Finding material
-Many people have asked me how I find the material listed on satellite-image-deep-learning, and the answer is that for the most part it is found for me! Specifically, it is recommended in my Github feed as I have followed the right core group of developers & academics who are responsible for much of the most high profile works listed on the repository. These people also star and fork other work which is then highlighted in my feed.  
+Many people have asked me how I find the material listed on satellite-image-deep-learning, and the answer is that for the most part it is found for me! Specifically, it is recommended in my Github feed as I have followed the right core group of developers & academics who are responsible for much of the most high profile works listed on the repository. These people also star and fork other work which is then highlighted in my feed. Since I am interested in work with published code, Github is naturally the best place to find material (honestly if it is on Gitlab I probably wont find it), but LinkedIn and Twitter are also excellent places to chance upon material. Beside these locations I also periodically check in on the Computer Vision and Pattern Recognition section of ArXiv, and most days view the Remote Sensing journal, screenshot below:
 
+![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/journal.jpg "The repository on Github")
 
-## Summary
-A low overhead reposotiroy can help you build your reputation on Github and grow your professional network. 
+## Why you should create something similar
+You might be wondering why I made the effort to create this repository, and what benefits it brings? Undeniably it is satisfying to have a popular repository on Github. It doesn't really matter to me that my most popular repository on Github doesn't contain a single line of code: it is obviously useful to at least a fraction of those that have starred it, and I feel like I have 'given back' something to the open source community to which I owe my career. I can also list several more tangible benefits:
+
+- Kudos in the interview & hiring process
+- Opens doors with other experienced developers & researchers on Github
+- Receive approaches about interesting jobs & consulting opportunities
+- Open source profile grants access to Github CoPilot[^10]
+- Receive nice messages from people this repository has helped in their research
+- Provides material to share on LinkedIn/Twitter to grow your professional network
+
+I have also enabled Github sponsors on the repository, as a route to making a small financial return on the time I have invested. However I am not yet convinced this will ever yield much in the way of income, since this repository is not actually code which can be used, unlike say some framework that could be critical to a business. Nevertheless something is better than nothing, and there are other options for making a financial return such as doing a spin out course or newsletter. However this is probably something for the future when I have more spare time.
+
+At this point I hope I have convinced you that the barrier to entry for creating a repository like satellite-image-deep-learning is really very low. Everyone has some domain knowledge and unique areas of interest which could provide the source of inspiration for a repository like this. I actually know people who have created similar pieces of work but never shared it online since 'nobody else would be interest'. I encourage you to give it a try, as you never know where it may take you.
+
+![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/acorn.jpg "Big things have small beginnings")
 
 ## Footnotes
 [^1]: https://github.com/robmarkcole/satellite-image-deep-learning
@@ -40,3 +54,5 @@ A low overhead reposotiroy can help you build your reputation on Github and grow
 [^6]: https://en.wikipedia.org/wiki/README
 [^7]: https://www.home-assistant.io/
 [^8]: https://www.satellitevu.com/
+[^9]: https://arxiv.org/list/cs.CV/recent
+[^10]: https://github.com/features/copilot
