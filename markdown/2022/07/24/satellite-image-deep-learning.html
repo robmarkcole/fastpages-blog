@@ -4,12 +4,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Dissecting the satellite-image-deep-learning Github repo | Blog of Robin Cole</title>
+<title>Dissecting the satellite-image-deep-learning repo | Blog of Robin Cole</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Dissecting the satellite-image-deep-learning Github repo" />
+<meta property="og:title" content="Dissecting the satellite-image-deep-learning repo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="How I maintain the popular Github repo and why you should create something similar too" />
-<meta property="og:description" content="How I maintain the popular Github repo and why you should create something similar too" />
+<meta name="description" content="How I maintain the popular Github repo and why you should create something similar" />
+<meta property="og:description" content="How I maintain the popular Github repo and why you should create something similar" />
 <link rel="canonical" href="https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html" />
 <meta property="og:url" content="https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html" />
 <meta property="og:site_name" content="Blog of Robin Cole" />
@@ -18,9 +18,9 @@
 <meta property="article:published_time" content="2022-07-24T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://robmarkcole.com/images/satellite-image-deep-learning/main.jpg" />
-<meta property="twitter:title" content="Dissecting the satellite-image-deep-learning Github repo" />
+<meta property="twitter:title" content="Dissecting the satellite-image-deep-learning repo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-24T00:00:00-05:00","datePublished":"2022-07-24T00:00:00-05:00","description":"How I maintain the popular Github repo and why you should create something similar too","headline":"Dissecting the satellite-image-deep-learning Github repo","image":"https://robmarkcole.com/images/satellite-image-deep-learning/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html"},"url":"https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-24T00:00:00-05:00","datePublished":"2022-07-24T00:00:00-05:00","description":"How I maintain the popular Github repo and why you should create something similar","headline":"Dissecting the satellite-image-deep-learning repo","image":"https://robmarkcole.com/images/satellite-image-deep-learning/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html"},"url":"https://robmarkcole.com/markdown/2022/07/24/satellite-image-deep-learning.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://robmarkcole.com/feed.xml" title="Blog of Robin Cole" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,7 +75,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Dissecting the satellite-image-deep-learning Github repo</h1><p class="page-description">How I maintain the popular Github repo and why you should create something similar too</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-07-24T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Dissecting the satellite-image-deep-learning repo</h1><p class="page-description">How I maintain the popular Github repo and why you should create something similar</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-07-24T00:00:00-05:00" itemprop="datePublished">
         Jul 24, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -104,6 +104,8 @@ window.onload = wrap_img;
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 <p>I maintain a very popular repository on Github called the satellite-image-deep-learning<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> repo, and this post provides the background to this repo, how I maintain it, and why you should create something similar</p>
+
+<p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/main.jpg" alt="" title="The repo on Github"></p>
 
 <h2 id="summary">
 <a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
