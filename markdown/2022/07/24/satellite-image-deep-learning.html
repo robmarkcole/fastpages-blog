@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      5 min read
     
 </span></p>
 
@@ -105,13 +105,15 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
-<p>I maintain a popular repository on Github called the satellite-image-deep-learning<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, currently sitting close to 4k stars. The repository basically lists useful references I have found related to satellite imagery and deep learning, but also goes beyond this to include sections on deploying machine learning models, and even a section on ‘movers and shakers’ on Github. This post provides the brief history of this repository, how I find material, and why you should create something similar. A screenshot of the repository is shown below:</p>
+<p>I maintain a popular repository on Github called the satellite-image-deep-learning<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, currently sitting close to 4k stars. The repository lists useful references I have found related to satellite imagery and deep learning, but also goes beyond this to include sections on deploying machine learning models, and even a section on ‘movers and shakers’ on Github. This post provides the brief history of this repository, how I find material, and why you should create something similar. A screenshot of the repository is shown below:</p>
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/main.jpg" alt="" title="The repository on Github"></p>
 
 <h2 id="history">
 <a class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h2>
 <p>So when and why did I start this repository? Looking at the <a href="https://github.com/robmarkcole/satellite-image-deep-learning/graphs/code-frequency">code-frequency</a> chart I see I started this repository sometime in April 2018, whilst I was working at Surrey Satellites<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. The satellite constellation I had been hired to work on as an optical systems engineer/project manager, was on hold as it did not secure the required investment. I had demonstrated my ability to program in python and was reassigned to assist with some development work. In particular the company had developed a basic catalogue for viewing satellite imagery &amp; capture locations on a map, built using a single <code class="language-plaintext highlighter-rouge">index.html</code> file containing some clever Javascript, and some python scripts that processed imagery metadata into a geojson file and generated thumbnails. I was asked to add some new features after the original developer left for a role as Descartes Labs. Most of the features were quite easily implemented, such as adding new sources of archive imagery (from a pile of CD roms) and tweaking the UI by editing some Javascript. The catalogue quickly grew, and improving the search functionality became a high priority. One particular feature request was to add tags to imagery, so a user could search using terms such as <code class="language-plaintext highlighter-rouge">residential area</code> or <code class="language-plaintext highlighter-rouge">port</code>. Now with well geo-referenced imagery the tagging could be performed using some kind of geo-spatial lookup, but the challenge was that much of the imagery lacked precise geo-location. What options are there for tagging an aerial image like this?</p>
+
+<p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/satellite-image-deep-learning/classification.jpg" alt="" title="Example of classification used to tag satellite images, taken from Kaggle"></p>
 
 <p>Naturally machine learning was suggested, and I was given two days to do a POC<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup>. The time-frame was very limited so I knew I would need to hit the ground running. I was aware of CNNs and their use for classification/tagging images and began searching online for relevant articles with published code, specifically applied to satellite imagery. From memory, I recall finding many academic papers, but very few were accompanied with published code. Also for those that were published with code, the code quality could vary significantly. At this point I started making a list of good resources using Markdown<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">3</a></sup> in a simple README<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">4</a></sup> and (with permission) put this on Github. Creating a list in markdown is very straight-forward, and the basic syntax is shown below:</p>
 
