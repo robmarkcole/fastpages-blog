@@ -6,7 +6,8 @@ categories: [markdown]
 toc: true
 image: images/worldstrat/main.jpg
 show_image: true
-hide: true
+hide: false
+comments: true
 ---
 ## Introduction
 
