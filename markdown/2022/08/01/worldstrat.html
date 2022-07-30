@@ -4,12 +4,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>The WorldStrat Dataset | Blog of Robin Cole</title>
+<title>Quick tour of the WorldStrat Dataset | Blog of Robin Cole</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="The WorldStrat Dataset" />
+<meta property="og:title" content="Quick tour of the WorldStrat Dataset" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Quick tour of the WorldStrat dataset" />
-<meta property="og:description" content="Quick tour of the WorldStrat dataset" />
+<meta name="description" content="This significant new dataset raises the bar for documentation quality" />
+<meta property="og:description" content="This significant new dataset raises the bar for documentation quality" />
 <link rel="canonical" href="https://robmarkcole.com/markdown/2022/08/01/worldstrat.html" />
 <meta property="og:url" content="https://robmarkcole.com/markdown/2022/08/01/worldstrat.html" />
 <meta property="og:site_name" content="Blog of Robin Cole" />
@@ -18,9 +18,9 @@
 <meta property="article:published_time" content="2022-08-01T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://robmarkcole.com/images/worldstrat/main.jpg" />
-<meta property="twitter:title" content="The WorldStrat Dataset" />
+<meta property="twitter:title" content="Quick tour of the WorldStrat Dataset" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-01T00:00:00-05:00","datePublished":"2022-08-01T00:00:00-05:00","description":"Quick tour of the WorldStrat dataset","headline":"The WorldStrat Dataset","image":"https://robmarkcole.com/images/worldstrat/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/08/01/worldstrat.html"},"url":"https://robmarkcole.com/markdown/2022/08/01/worldstrat.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-01T00:00:00-05:00","datePublished":"2022-08-01T00:00:00-05:00","description":"This significant new dataset raises the bar for documentation quality","headline":"Quick tour of the WorldStrat Dataset","image":"https://robmarkcole.com/images/worldstrat/main.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/08/01/worldstrat.html"},"url":"https://robmarkcole.com/markdown/2022/08/01/worldstrat.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://robmarkcole.com/feed.xml" title="Blog of Robin Cole" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -90,13 +90,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">The WorldStrat Dataset</h1><p class="page-description">Quick tour of the WorldStrat dataset</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-01T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Quick tour of the WorldStrat Dataset</h1><p class="page-description">This significant new dataset raises the bar for documentation quality</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-01T00:00:00-05:00" itemprop="datePublished">
         Aug 1, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -118,12 +118,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#extending-the-dataset">Extending the dataset</a></li>
 <li class="toc-entry toc-h2"><a href="#super-resolution">Super resolution</a></li>
 <li class="toc-entry toc-h2"><a href="#other-uses-for-the-dataset">Other uses for the dataset</a></li>
+<li class="toc-entry toc-h2"><a href="#dataset-datasheet">Dataset Datasheet</a></li>
 <li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
-
-<p>A new dataset called the WorldStrat dataset was this week announced on Twitter by Julien Cornebise and colleagues. The release includes a paper on arXiv<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, code on Github<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, and the dataset itself on both Zenodo<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and Kaggle<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</p>
+<p>A new dataset called the WorldStrat dataset was this week announced on Twitter by <a href="https://twitter.com/JCornebise">Julien Cornebise</a>, <a href="https://twitter.com/ivanorsolic">Ivan Orsolic</a>, and <a href="https://twitter.com/alkalait">Freddie Kalaitzis</a>. The dataset raises the bar in documentation quality of a dataset and the release includes a paper on arXiv<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, code on Github<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, and the dataset itself on both Zenodo<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and Kaggle<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</p>
 
 <blockquote class="twitter-tweet tw-align-center">
 <p lang="en" dir="ltr">Proud to release the WorldStrat dataset with <a href="https://twitter.com/ivanorsolic?ref_src=twsrc%5Etfw">@ivanorsolic</a> <a href="https://twitter.com/alkalait?ref_src=twsrc%5Etfw">@alkalait</a> and <a href="https://twitter.com/esa?ref_src=twsrc%5Etfw">@esa</a> Φ-lab:<br>- ~10,000 km² of high-res SPOT satellite imagery<br>- Multi-temporal matched low-res Sentinel2 images<br>- Stratified wrt global land-uses<br>- Enriched with sites under-represented in ML<br>🧵1/9 <a href="https://t.co/kR0AnzIlkg">pic.twitter.com/kR0AnzIlkg</a></p>— Julien Cornebise (@JCornebise) <a href="https://twitter.com/JCornebise/status/1549356696664956928?ref_src=twsrc%5Etfw">July 19, 2022</a>
@@ -136,10 +136,10 @@ window.onload = wrap_img;
   <li>Greater than 100 GB of imagery with global coverage</li>
   <li>Covers locations typically under-represented in ML datasets</li>
   <li>Colocated low and high resolution imagery</li>
-  <li>Code provided to extend the dataset</li>
+  <li>Code provided to extend the dataset &amp; integrate with the EO-Learn<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> Python package</li>
   <li>Models &amp; tutorials provided</li>
   <li>Demonstrates super resolving Sentinel 2 imagery</li>
-  <li>Licenses covering non commercial use</li>
+  <li>The code, the Sentinel 2 images, the locations, the methodology, and the pre-trained models are all licensed for commercial use (SPOT imagery is NOT)</li>
 </ul>
 
 <p>The dataset comprises Sentinel 2 time-series &amp; colocated high resoluton Airbus SPOT imagery providing 10 &amp; 1.5 m/pixel respectively. An example is shown below:</p>
@@ -148,13 +148,13 @@ window.onload = wrap_img;
 
 <h2 id="getting-started">
 <a class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started</h2>
-<p>I followed the instructions in the repository readme and downloaded the smaller dataset from Kaggle via the web UI. The zipped Kaggle dataset is 53GB, and even on a fast internet connection the download took 3-4 hours<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>. I began by running the <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Exploration.ipynb">Dataset Exploration.ipynb</a> notebook, which gives an introduction to the dataset. Interestingly the imagery locations were suggested by several organisations:</p>
+<p>I followed the instructions in the repository readme and downloaded the smaller dataset from Kaggle via the web UI. The zipped Kaggle dataset is 53GB, and even on a fast internet connection the download took 3-4 hours<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>. I began by running the <a href="https://github.com/worldstrat/worldstrat/blob/main/Dataset%20Exploration.ipynb">Dataset Exploration.ipynb</a> notebook, which gives an introduction to the dataset. Interestingly the imagery locations were suggested by several organisations:</p>
 
 <ul>
   <li>22 × 22.5km² images of Amnesty provided locations or 198 × 2.5km² images.</li>
   <li>39 × 22.5km² images of ASMSpotter provided locations or 351 × 2.5km² images.</li>
   <li>981 × 2.5km² images of UNHCR provided locations.</li>
-  <li>2,407 × 2.5km² images of randomly sampled/stratified locations.</li>
+  <li>2,407 × 2.5km² images of stratified-sampled locations to ensure coverage of all types of land-use and human density</li>
 </ul>
 
 <p>Several maps are generated using <a href="http://python-visualization.github.io/folium/">folium</a> which show the capture location of the images. The image metadata is visualised in a pandas dataframe, and includes lat/lon, the source (e.g. Amnesty, UNHCR etc.) and a description field. Some very interesting locations are included, such as <code class="language-plaintext highlighter-rouge">Camp 25, North Korea- Gulag</code>, <code class="language-plaintext highlighter-rouge">USA - migrant camps on border</code> and <code class="language-plaintext highlighter-rouge">Brazil-Jaci_Deforestation_Cattle</code>. Given the provided metadata you could at this point start curating the dataset, say if you were interested in generating a version of the dataset focussed on a particular geography.</p>
@@ -169,39 +169,52 @@ window.onload = wrap_img;
 
 <h2 id="super-resolution">
 <a class="anchor" href="#super-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Super resolution</h2>
-<p>One of the stated aims of releasing this dataset was to enable the training of super resolution models. The hope is that by super resolving free Sentinel imagery, researchers without the budget for purchasing high resolution imagery (e.g. SPOT) can use super resolved &amp; free Sentinel imagery. Training super resolution models generally requires colocated low and high resolution imagery. One strategy often used is to downsample high resolution imagery to low resolution, and use these pairs for training. For example a 1.5m spot image could be downsampled to 10m and used to train a model that could then be applied to 10m Sentinel 2 imagery. However with this approach has disadvantages. Firstly the downsampled imagery may have different characteristics from the imagery you will use in practice, leading to unsatisfactory performance in real applications. Secondly, single-image super resolution (SISR) generally is outperformed by multi-image super resolution (MISR), and creating a MISR dataset from high resolution imagery alone would multiply your costs significantly. Fortunately the WorldStrat dataset provides both imagery from the two satellites, and multiple frames from Sentinel 2, enabling the training of MISR super resolution models (as well as SISR). The Github code includes a script for training super resolution models and an example output is shown below:</p>
+<p>One of the stated aims of releasing this dataset was to enable the training of super resolution models. The hope is that by super resolving free Sentinel imagery, users without the budget for purchasing high resolution imagery (e.g. SPOT) can use super resolved &amp; free Sentinel imagery. Training super resolution models generally requires colocated low and high resolution imagery. One strategy often used is to downsample high resolution imagery to low resolution, and use these pairs for training. For example a 1.5m spot image could be downsampled to 10m and used to train a model that could then be applied to 10m Sentinel 2 imagery. However with this approach has disadvantages. Firstly the downsampled imagery may have different characteristics from the imagery you will use in practice, leading to unsatisfactory performance in real applications. Secondly, single-image super resolution (SISR) generally is outperformed by multi-image super resolution (MISR), and creating a MISR dataset from high resolution imagery alone would multiply your costs significantly. Fortunately the WorldStrat dataset provides both imagery from the two satellites, and multiple frames from Sentinel 2, enabling the training of MISR super resolution models (as well as SISR). The Github code includes a script for training super resolution models and an example output is shown below:</p>
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/worldstrat/SR.jpg" alt="" title="Super resolution example"></p>
 
-<p>The notebook <a href="https://github.com/worldstrat/worldstrat/blob/main/Training.ipynb">Training.ipynb</a> demonstrates how to run the training script. Whilst in general training is performed on a Linux machine, the authors have very helpfully included arguments if you wanted to perform training on a Windows machine. The code itself is written in python and uses pytorch and <a href="https://www.pytorchlightning.ai/">pytorch-lightning</a> for the model and training loop. The code also includes logging of training metrics to <a href="https://wandb.ai/site">Weights &amp; Biases</a>. The models themselves are relatively lightweight and it is suggested that training the MISR model will take 45 min - 1.5 hr on a single GPU instance. This should be within the limitations of Kaggle GPU instances, so if you are interested in training the model yourself I would recommend beginning there. Note that a pretrained model is supplied in the Github repository and its use is shown in the <a href="https://github.com/worldstrat/worldstrat/blob/main/Inference.ipynb">Inference.ipynb</a> notebook. If you want to read more about super resolution see the links in my satellite-image-deep-learning Github repository <a href="https://github.com/robmarkcole/satellite-image-deep-learning#super-resolution">here</a>.</p>
+<p>The notebook <a href="https://github.com/worldstrat/worldstrat/blob/main/Training.ipynb">Training.ipynb</a> demonstrates how to run the training script. Whilst in general training is performed on a Linux machine, the authors have very helpfully included arguments if you wanted to perform training on a Windows machine. The code itself is written in python and uses pytorch and <a href="https://www.pytorchlightning.ai/">pytorch-lightning</a> for the model and training loop. The code also includes logging of training metrics to <a href="https://wandb.ai/site">Weights &amp; Biases</a>. The models themselves are relatively lightweight and it is suggested that training the MISR model will take 45 min - 1.5 hr on a single GPU instance. This should be within the limitations of Kaggle GPU instances, so if you are interested in training the model yourself I would recommend beginning there. Note that a pretrained model is supplied in the Github repository and its use is shown in the <a href="https://github.com/worldstrat/worldstrat/blob/main/Inference.ipynb">Inference.ipynb</a> notebook. If you want to read more about super resolution read section 4.1 of the ArXiv paper and see the links in my satellite-image-deep-learning Github repository <a href="https://github.com/robmarkcole/satellite-image-deep-learning#super-resolution">here</a>.</p>
 
 <h2 id="other-uses-for-the-dataset">
 <a class="anchor" href="#other-uses-for-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other uses for the dataset</h2>
-<p>The availability of high resolution imagery is of significant interest in itself, since this is typically very expensive to acquire. This dataset covers locations typically under-represented in high resolution datasets and so will be of significant interest to those who study those locations. All images in this dataset are however provided without annotation, so their use in applications such as segmentation or object detection would first require annotation to be performed. However there are a number of unsupervised or self-supervised techniques which do not required annotated data. In particular self supervised change detection is a technique that can be performed on the Sentinel 2 time series imagery, and where having the high resolution reference could aid with evaluation of predictions. A good introductory read on this topic is the paper <a href="https://arxiv.org/abs/2105.08501v2">Self-supervised Remote Sensing Images Change Detection at Pixel-level</a></p>
+<p>The availability of high resolution imagery is of significant interest in itself, since this is typically very expensive to acquire. This dataset covers locations typically under-represented in high resolution datasets and so will be of significant interest to those who study those locations. All images in this dataset are however provided without annotation, so their use in applications such as segmentation or object detection would first require annotation to be performed<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>:. However there are a number of unsupervised or self-supervised techniques which do not required annotated data. In particular self supervised change detection is a technique that can be performed on the Sentinel 2 time series imagery, and where having the high resolution reference could aid with evaluation of predictions. A good introductory read on this topic is the paper <a href="https://arxiv.org/abs/2105.08501v2">Self-supervised Remote Sensing Images Change Detection at Pixel-level</a></p>
+
+<h2 id="dataset-datasheet">
+<a class="anchor" href="#dataset-datasheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Datasheet</h2>
+<p>The appendix of the ArXiv paper includes a <code class="language-plaintext highlighter-rouge">Datasheet</code> for the dataset which describes the motivation, composition, collection process &amp; recommended uses for the dataset following a methodology presented in the paper Datasheets for Datasets[^8]. The purpose of including this datasheet is to improve &amp; standardise the quality of the documentation, in order to enable the use of the dataset with confidence and provide transparency and accountability around the production of the dataset itself.</p>
 
 <h2 id="summary">
 <a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
-<p>Overall I am very impressed by both the size and global nature of the dataset, the quality of the documentation and code, and the level of thought that has gone into its preparation. Datasets often focus on a particular part of the world (USA mostly) and are often released without clear documentation on how they were produced, making them hard to extend. Therefore WorldStrat demonstrates best practice for publishing a dataset which I hope other publishers will emulate. Sentinel 2 imagery is widely used and so enhancement of its qualities through applications such as super resolution could have significant positive impact on end users.</p>
+<p>Overall I am very impressed by both the size and global nature of the dataset, and the high quality of the documentation and code. Datasets often focus on a particular part of the world (USA mostly) and are often released without clear documentation on how they were produced, making them hard to extend or use with confidence. Therefore WorldStrat demonstrates best practice for publishing a dataset which I hope other publishers will emulate. Sentinel 2 imagery is widely used and so enhancement of its qualities through applications such as super resolution could have significant positive impact on end users.</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+<p>cross-reference it with any other source of label, for example mapping databases like OpenStreetMap,
+for building imprints, structure detection, etc
+[^8]: https://arxiv.org/abs/1803.09010</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
-      <p>Paper on <a href="https://arxiv.org/abs/2207.06418">arXiv</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://arxiv.org/abs/2207.06418 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2" role="doc-endnote">
-      <p>Code <a href="https://github.com/worldstrat/worldstrat">on Github</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://github.com/worldstrat/worldstrat <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:3" role="doc-endnote">
-      <p>The full dataset is <a href="https://zenodo.org/record/6810792#.YtjNb-zMK3I">hosted on Zenodo</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://zenodo.org/record/6810792#.YtjNb-zMK3I <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:4" role="doc-endnote">
-      <p>A smaller version of the dataset <a href="https://www.kaggle.com/datasets/jucor1/worldstrat">is on Kaggle</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://www.kaggle.com/datasets/jucor1/worldstrat <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:5" role="doc-endnote">
-      <p>Alternatively I could have just created a notebook on Kaggle itself, and would not have needed to wait for a download. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://eo-learn.readthedocs.io/en/latest/index.html <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Alternatively I could have just created a notebook on Kaggle itself, and would not have needed to wait for a download. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>In the ArXiv paper they note: Because every image is geo-referenced and timestamped, it is also possible to <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
