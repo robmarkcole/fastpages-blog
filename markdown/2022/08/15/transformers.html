@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Transformers in remote sensing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Introduction to Transformers and their use in remote sensing" />
-<meta property="og:description" content="Introduction to Transformers and their use in remote sensing" />
+<meta name="description" content="Introduction to Transformers and why you should care" />
+<meta property="og:description" content="Introduction to Transformers and why you should care" />
 <link rel="canonical" href="https://robmarkcole.com/markdown/2022/08/15/transformers.html" />
 <meta property="og:url" content="https://robmarkcole.com/markdown/2022/08/15/transformers.html" />
 <meta property="og:site_name" content="Blog of Robin Cole" />
@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://robmarkcole.com/images/transformers/transformer.jpg" />
 <meta property="twitter:title" content="Transformers in remote sensing" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-15T00:00:00-05:00","datePublished":"2022-08-15T00:00:00-05:00","description":"Introduction to Transformers and their use in remote sensing","headline":"Transformers in remote sensing","image":"https://robmarkcole.com/images/transformers/transformer.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/08/15/transformers.html"},"url":"https://robmarkcole.com/markdown/2022/08/15/transformers.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-15T00:00:00-05:00","datePublished":"2022-08-15T00:00:00-05:00","description":"Introduction to Transformers and why you should care","headline":"Transformers in remote sensing","image":"https://robmarkcole.com/images/transformers/transformer.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://robmarkcole.com/markdown/2022/08/15/transformers.html"},"url":"https://robmarkcole.com/markdown/2022/08/15/transformers.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://robmarkcole.com/feed.xml" title="Blog of Robin Cole" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -90,7 +90,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Transformers in remote sensing</h1><p class="page-description">Introduction to Transformers and their use in remote sensing</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-15T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Transformers in remote sensing</h1><p class="page-description">Introduction to Transformers and why you should care</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-15T00:00:00-05:00" itemprop="datePublished">
         Aug 15, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -114,37 +114,17 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h1"><a href="#deep-dive-unetformer">Deep dive: UNetFormer</a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
-</ul>
-</li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 <p>paper on arXiv<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
 
-<h1 id="deep-dive-unetformer">
-<a class="anchor" href="#deep-dive-unetformer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep dive: UNetFormer</h1>
-<ul>
-  <li>Title: A UNet-like transformer for efficient semantic segmentation of remote sensing urban scene imagery</li>
-  <li>Paper: https://arxiv.org/abs/2109.08937</li>
-  <li>Code: https://github.com/WangLibo1995/GeoSeg</li>
-  <li>Datasets: ISPRS Vaihingen and Potsdam &amp; LoveDA used</li>
-</ul>
+<blockquote class="twitter-tweet tw-align-center">
+<p lang="en" dir="ltr">What questions do people have about Transformers and their use in remote sensing? This is the topic of my next blog post 🙇‍♂️🚀</p>— Robin Cole (@robmarkcole) <a href="https://twitter.com/robmarkcole/status/1554348041926311937?ref_src=twsrc%5Etfw">August 2, 2022</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p><strong>What’s a Transformer Model?:</strong> a neural network architecture published in a 2017 paper titled <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>. Transformers learn context by tracking relationships in sequential data using a technique called attention. Transformers are replacing CNNs and RNNs in many applications and have come to dominate the field of natural language processing (NLP). <a href="https://blogs.nvidia.com/blog/2022/03/25/what-is-a-transformer-model/">Ref and further reading</a></p>
-
-<p><strong>What’s new here?:</strong> semantic segmentation has typically been tackled using a Fully Convolutional Network (FCN) with an
-encoder-decoder architecture (i.e. U-net) employing a ResNet (or similar) backbone. The encoder generates multi-level feature maps which are incorporated into the final prediction by a decoder.
-<strong>What are the results?:</strong></p>
-
-<p><strong>My thoughts:</strong> given the significant impact of Transformers on NLP, their use in vision could lead to new breakthroughs in semantic segmentation accuracy. One issue I have experienced with transformers is that they can use a lot of RAM, so in practice improved accuracy may come at the expense of performance and cost. I suspect that U-net will remain ‘good enough’ for a while longer</p>
-
-<p><strong>Further reading:</strong></p>
-<ul>
-  <li>
-<a href="https://github.com/justchenhao/BIT_CD">BIT_CD</a> is a change detection model using transformers</li>
-</ul>
+<p>What is a Transformer Model? A neural network architecture published in a 2017 paper titled <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>. Transformers learn context by tracking relationships in sequential data using a technique called attention. Transformers are replacing CNNs and RNNs in many applications and have come to dominate the field of natural language processing (NLP). <a href="https://blogs.nvidia.com/blog/2022/03/25/what-is-a-transformer-model/">Ref and further reading</a></p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
