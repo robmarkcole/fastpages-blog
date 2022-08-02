@@ -6,7 +6,7 @@ categories: [markdown]
 toc: true
 image: images/transformers/transformer.jpg
 show_image: true
-hide: false
+hide: true
 comments: true
 ---
 
