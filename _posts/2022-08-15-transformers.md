@@ -13,7 +13,9 @@ comments: true
 ## Introduction
 I will admit that whenever I hear Transformers, the first image that flashes through my mind is that of the cartoon characters I remember from my childhood in the 1980's. And whilst that was, and continues to be a great TV & film series, the Transformers I wish to talk about are those making waves in the deep learning community. So first things first, what is a Transformer? The Transformer is a neural network architecture first published in a 2017 paper titled [Attention Is All You Need](https://arxiv.org/abs/1706.03762) by researchers at Google. Transformers learn context by tracking relationships in sequential data using a technique called attention. Transformers are replacing CNN's and RNN's in many applications and have come to dominate the field of natural language processing[^1]. Transformers were then applied to imagery in the paper [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929). Transformers applied to vision are referred to as Vision Transformers, or ViT. I will not go deep into deep technical details here since those are covered in detail in the paper and elsewhere, but the first figure from the paper is worth reproducing here.
 
-![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/transformers/paper_fig1.jpg "Figure 1 from An Image is Worth 16x16 Words" )
+![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/transformers/paper_fig1.jpg "Figure 1 from An Image is Worth 16x16 Words")
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/3e/Vision_Transformer.gif "Vision Transformer Architecture for Image Classification, from Wikipedia")
 
 
 ## Transformers in remote sensing
