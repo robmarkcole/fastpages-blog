@@ -26,15 +26,20 @@ Relatively recently I have started noticing greater numbers of remote sensing pu
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">What questions do people have about Transformers and their use in remote sensing? This is the topic of my next blog post 🙇‍♂️🚀</p>&mdash; Robin Cole (@robmarkcole) <a href="https://twitter.com/robmarkcole/status/1554348041926311937?ref_src=twsrc%5Etfw">August 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 To paraphrase the questions asked:
-- What are the benefits of Transformers over CNN's?
-- Do they require more training data than CNN's?
+- Do Transformers have the best performance on common remote sensing tasks?
+- Do they require more training data?
 - Is there a minimum data volume requirement?
-- Are they harder to train than CNN's?
+- Are they harder to train?
 - Are there significant engineering tradeoffs in using Transformers?
-- Can Transformers be used for segmentation & small object detection?
 - Are transformers of any use for tabular remote sensing data?
 
-## Nomenclature
+To begin addressing these questions I will first reference the 2022 paper [Current Trends in Deep Learning for Earth Observation: An Open-source Benchmark Arena for Image Classification](add url). This paper compares compares the performance of vision transformers (ViT's) with eight other neural network architectures on the task of classification. Figure 1 from that paper is shown below:
+
+Add classification.jpg
+
+This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that pre-training always improves model performance, and amongst the models, ViT and DenseNet are the best performers. However contrary to expectations, ViT performs *worse* on the largest dataset, BigEarthNet. It is also interesting that for many datasets, ResNet achieves comparable performance. 
+
+## Acronyms
 - CNN: convolutional neural network
 - RNN: recurrent neural network
 - ViT: vision transformer
