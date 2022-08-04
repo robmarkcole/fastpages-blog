@@ -26,10 +26,12 @@ Relatively recently I have started noticing greater numbers of remote sensing pu
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">What questions do people have about Transformers and their use in remote sensing? This is the topic of my next blog post 🙇‍♂️🚀</p>&mdash; Robin Cole (@robmarkcole) <a href="https://twitter.com/robmarkcole/status/1554348041926311937?ref_src=twsrc%5Etfw">August 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 To paraphrase the questions asked:
-- What are the advantages of Transformers in classification/segmentation/object detection?
+- What are the benefits of Transformers over CNN's?
 - Do they require more training data than CNN's?
+- Is there a minimum data volume requirement?
 - Are they harder to train than CNN's?
 - Are there significant engineering tradeoffs in using Transformers?
+- Can Transformers be used for segmentation & small object detection?
 - Are transformers of any use for tabular remote sensing data?
 
 ## Nomenclature
