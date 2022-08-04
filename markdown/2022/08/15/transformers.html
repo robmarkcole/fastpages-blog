@@ -96,7 +96,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -115,7 +115,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#transformers-in-remote-sensing">Transformers in remote sensing</a></li>
-<li class="toc-entry toc-h2"><a href="#nomenclature">Nomenclature</a></li>
+<li class="toc-entry toc-h2"><a href="#acronyms">Acronyms</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
@@ -139,17 +139,22 @@ baked into each layer throughout the whole model. In ViT, only MLP layers are lo
 
 <p>To paraphrase the questions asked:</p>
 <ul>
-  <li>What are the benefits of Transformers over CNN’s?</li>
-  <li>Do they require more training data than CNN’s?</li>
+  <li>Do Transformers have the best performance on common remote sensing tasks?</li>
+  <li>Do they require more training data?</li>
   <li>Is there a minimum data volume requirement?</li>
-  <li>Are they harder to train than CNN’s?</li>
+  <li>Are they harder to train?</li>
   <li>Are there significant engineering tradeoffs in using Transformers?</li>
-  <li>Can Transformers be used for segmentation &amp; small object detection?</li>
   <li>Are transformers of any use for tabular remote sensing data?</li>
 </ul>
 
-<h2 id="nomenclature">
-<a class="anchor" href="#nomenclature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nomenclature</h2>
+<p>To begin addressing these questions I will first reference the 2022 paper <a href="add%20url">Current Trends in Deep Learning for Earth Observation: An Open-source Benchmark Arena for Image Classification</a>. This paper compares compares the performance of vision transformers (ViT’s) with eight other neural network architectures on the task of classification. Figure 1 from that paper is shown below:</p>
+
+<p>Add classification.jpg</p>
+
+<p>This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that pre-training always improves model performance, and amongst the models, ViT and DenseNet are the best performers. However contrary to expectations, ViT performs <em>worse</em> on the largest dataset, BigEarthNet. It is also interesting that for many datasets, ResNet achieves comparable performance.</p>
+
+<h2 id="acronyms">
+<a class="anchor" href="#acronyms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acronyms</h2>
 <ul>
   <li>CNN: convolutional neural network</li>
   <li>RNN: recurrent neural network</li>
