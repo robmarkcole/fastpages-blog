@@ -116,9 +116,10 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#transformers-in-remote-sensing">Transformers in remote sensing</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#performance-of-transformers">Performance of Transformers</a></li>
+<li class="toc-entry toc-h3"><a href="#performance">Performance</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#further-reading">Further reading</a></li>
 <li class="toc-entry toc-h2"><a href="#terminology">Terminology</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
@@ -129,8 +130,7 @@ window.onload = wrap_img;
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/transformers/paper_fig1.jpg" alt="" title="Figure 1 from An Image is Worth 16x16 Words"></p>
 
-<p>The caption from the figure above explains: <em>We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.</em> We can see that there are absolutely <strong>no convolutional layers</strong>, and the authors note that the ViT <em>has much less image-specific inductive bias than CNNs. In CNNs, locality, two-dimensional neighborhood structure, and translation equivariance are
-baked into each layer throughout the whole model. In ViT, only MLP layers are local and translationally equivariant, while the self-attention layers are global.</em> This results in ViT’s requiring larger data volumes to achieve comparable levels of performance to CNN’s. Indeed a ViT trained on ImageNet (1M images), under-performs a CNN. However with significantly larger data volumes (300M images), the ViT outperforms the CNN. Also a ViT is able to capture more global relationships in an image, which hints at their potential benefits when applied to remote sensing imagery. Note that in practice it is typical to fine tune a ViT that has been pre-trained, just as we usually do with a CNN. For further reading I also recommend reading the original Google <a href="https://ai.googleblog.com/2020/12/transformers-for-image-recognition-at.html">blog post on transformers</a>, and if you are interested in a pytorch implementation of a ViT see <a href="https://github.com/lucidrains/vit-pytorch">vit-pytorch</a>.</p>
+<p>The caption from the figure above explains: <em>We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.</em> We can see that there are absolutely <strong>no convolutional layers</strong>, and the authors note that the ViT <em>has much less image-specific inductive bias than CNNs. In CNNs, locality, two-dimensional neighborhood structure, and translation equivariance are baked into each layer throughout the whole model. In ViT, only MLP layers are local and translationally equivariant, while the self-attention layers are global.</em> This results in ViT’s requiring larger data volumes to achieve comparable levels of performance to CNN’s. Indeed a ViT trained on ImageNet (1M images), under-performs a CNN. However with significantly larger data volumes (300M images), the ViT outperforms the CNN. Also a ViT is able to capture more global relationships in an image, which hints at their potential benefits when applied to remote sensing imagery. Note that in practice it is typical to fine tune a ViT that has been pre-trained, just as we usually do with a CNN.</p>
 
 <h2 id="transformers-in-remote-sensing">
 <a class="anchor" href="#transformers-in-remote-sensing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transformers in remote sensing</h2>
@@ -151,13 +151,24 @@ baked into each layer throughout the whole model. In ViT, only MLP layers are lo
   <li>Are transformers of any use for tabular remote sensing data?</li>
 </ul>
 
-<h3 id="performance-of-transformers">
-<a class="anchor" href="#performance-of-transformers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance of Transformers</h3>
+<h3 id="performance">
+<a class="anchor" href="#performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance</h3>
 <p>To begin addressing these questions I will first reference the 2022 paper <a href="add%20url">Current Trends in Deep Learning for Earth Observation: An Open-source Benchmark Arena for Image Classification</a>. This paper compares compares the performance of vision transformers (ViT’s) with eight other neural network architectures on the task of classification. Figure 1 from that paper is shown below:</p>
 
 <p><img src="https://raw.githubusercontent.com/robmarkcole/blog/master/images/transformers/classification.jpg" alt="" title="Figure 1 from Current Trends in Deep Learning for Earth Observation"></p>
 
 <p>This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that pre-training always improves model performance, which is a very useful takeaway. Amongst the models, ViT and DenseNet are the best performers, although ViT actually performs <em>worst</em> on the largest dataset, BigEarthNet. It is also interesting that for many of the datasets, the commonly used ResNet achieves comparable performance.</p>
+
+<h2 id="further-reading">
+<a class="anchor" href="#further-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h2>
+<ul>
+  <li>Original Google <a href="https://ai.googleblog.com/2020/12/transformers-for-image-recognition-at.html">blog post on transformers</a>
+</li>
+  <li>Pytorch implementation of a ViT: <a href="https://github.com/lucidrains/vit-pytorch">vit-pytorch</a>
+</li>
+  <li>ArXiv paper: <a href="https://arxiv.org/abs/2207.09238">Formal Algorithms for Transformers</a>
+</li>
+</ul>
 
 <h2 id="terminology">
 <a class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology</h2>
