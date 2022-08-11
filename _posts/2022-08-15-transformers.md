@@ -28,7 +28,7 @@ To paraphrase the main questions asked:
 - Do Transformers have the best performance?
 - Do they require more training data?
 - Are they harder to train?
-- Can they be used for all common remote sensing tasks including classification/segmentation/object detection?
+- Can they be used for classification/segmentation/object detection?
 
 I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.
 
@@ -43,7 +43,10 @@ This paper provides a useful overview of multiple classification datasets, shown
 I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models[^3], so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is **not** a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario, so if you find one please mention in the comments section. There are papers that propose innovations to reduce the training dataset size requirements, for example [using self-supervision](https://arxiv.org/abs/2106.03746). 
 
 ## Training difficulty
-If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial [Fine-Tune ViT for Image Classification with Huggingface Transformers](https://huggingface.co/blog/fine-tune-vit) which you can very conveniently open in Google Colab using the shortcut at the start of the post. The tutorial uses a bean dataset but can be adapted to use a remote sensing dataset by setting `dataset = load_dataset("nielsr/eurosat-demo")`
+If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial [Fine-Tune ViT for Image Classification with Huggingface Transformers](https://huggingface.co/blog/fine-tune-vit) which you can very conveniently open in Google Colab using the shortcut at the start of the post. Training for only 4 epochs on a Colab Pro instance completes very quickly (few mins) and yields a model with high classification accuracy on this admittedly very simple dataset. Based on this experience I have no reason to suspect that fine tuning a ViT will be any more difficult than a CNN, but if you have a different experience please let me know in the comments.
+
+## Use cases
+Vision Transformers clearly excel at classification tasks, but what about other use cases?
 
 ## Summary
 The use of vision Transformers is an area of active research and providing a summary on the overall state of research would be a research paper in itself, and beyond the scope of this blog post. However I hope this post has provided a useful introduction to the novel features of Transformers, and some insight into the practicality of using them. So should you consider using Transformers in your work any time soon? My own assessment is that people should continue to use CNN's and only really consider using a Transformer if they require the highest accuracy (for example if entering a competition), have medium to large datasets available, and a prepared for significant time performing experiments. 
