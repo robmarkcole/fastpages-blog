@@ -24,11 +24,10 @@ Recently I have noticed greater numbers of remote sensing publications using Tra
 
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">What questions do people have about Transformers and their use in remote sensing? This is the topic of my next blog post 🙇‍♂️🚀</p>&mdash; Robin Cole (@robmarkcole) <a href="https://twitter.com/robmarkcole/status/1554348041926311937?ref_src=twsrc%5Etfw">August 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-To paraphrase the questions asked:
+To paraphrase the main questions asked:
 - Do Transformers have the best performance?
 - Do they require more training data?
 - Are they harder to train?
-- Are there significant engineering tradeoffs in using Transformers?
 
 I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.
 
@@ -40,18 +39,18 @@ To begin addressing these questions I will first reference the 2022 paper [Curre
 This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that **pre-training almost always improves model performance**, which is a very useful takeaway. Amongst the models, **ViT and DenseNet are the best performers**, although ViT actually performs *worst* on the largest dataset, BigEarthNet. It is also interesting that for many of the datasets, a ResNet achieves comparable performance.
 
 ## Training data requirements
-I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models[^3], so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is **not** a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario. There are papers that propose innovations to reduce the training dataset size requirements, for example [using self-supervision](https://arxiv.org/abs/2106.03746). 
+I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models[^3], so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is **not** a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario, so if you find one please mention in the comments section. There are papers that propose innovations to reduce the training dataset size requirements, for example [using self-supervision](https://arxiv.org/abs/2106.03746). 
 
 ## Training difficulty
-I expect there is a perception that Transformers will be more difficult to train since they are known to require large training datasets when trained from scratch. However if we again consider only fine tuning, is training more difficult than CNN's? I think this is a hard question to answer since difficulty is a somewhat subjective term, and clearly what is considered difficult today might not be considered difficult in five years time, e.g. due to improvements in hardware performance that massively speed up training cycles. So to flip this question around, how easy can it be to train a vision Transformer? To find out I worked through this post [Fine-Tune ViT for Image Classification with Huggingface Transformers](https://huggingface.co/blog/fine-tune-vit)
+If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through [Fine-Tune ViT for Image Classification with Huggingface Transformers](https://huggingface.co/blog/fine-tune-vit)
+
+## Summary
+The use of vision Transformers is an area of active research and providing a summary on the overall state of research would be a research paper in itself, and beyond the scope of this blog post. However I hope this post has provided a useful introduction to the novel features of Transformers, and some insight into the practicality of using them. So should you consider using Transformers in your work any time soon? My own assessment is that people should continue to use CNN's and only really consider using a Transformer if they require the highest accuracy (for example if entering a competition), have medium to large datasets available, and a prepared for significant time performing experiments. 
 
 ## Further reading
 - Original Google [blog post on transformers](https://ai.googleblog.com/2020/12/transformers-for-image-recognition-at.html)
 - Pytorch implementation of a ViT: [vit-pytorch](https://github.com/lucidrains/vit-pytorch)
 - ArXiv paper: [Formal Algorithms for Transformers](https://arxiv.org/abs/2207.09238)
-
-## Summary
-The use of vision Transformers is an area of active research and providing a summary on the overall state of research would be a research paper in itself, and beyond the scope of this blog post. However I hope this post has provided a useful introduction to the novel features of Transformers, and some insight into the practicality of using them. So should you consider using Transformers in your work any time soon? My own assessment is that people should continue to use CNN's and only really consider using a Transformer if they require the highest accuracy (for example if entering a competition), have medium to large datasets available, and a prepared for significant time performing experiments. 
 
 ## Terminology
 - CNN: convolutional neural network
