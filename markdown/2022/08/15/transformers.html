@@ -118,8 +118,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#performance">Performance</a></li>
 <li class="toc-entry toc-h2"><a href="#training-data-requirements">Training data requirements</a></li>
 <li class="toc-entry toc-h2"><a href="#training-difficulty">Training difficulty</a></li>
-<li class="toc-entry toc-h2"><a href="#further-reading">Further reading</a></li>
 <li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h2"><a href="#further-reading">Further reading</a></li>
 <li class="toc-entry toc-h2"><a href="#terminology">Terminology</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
@@ -141,12 +141,11 @@ window.onload = wrap_img;
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>To paraphrase the questions asked:</p>
+<p>To paraphrase the main questions asked:</p>
 <ul>
   <li>Do Transformers have the best performance?</li>
   <li>Do they require more training data?</li>
   <li>Are they harder to train?</li>
-  <li>Are there significant engineering tradeoffs in using Transformers?</li>
 </ul>
 
 <p>I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.</p>
@@ -161,11 +160,15 @@ window.onload = wrap_img;
 
 <h2 id="training-data-requirements">
 <a class="anchor" href="#training-data-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training data requirements</h2>
-<p>I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>, so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is <strong>not</strong> a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario. There are papers that propose innovations to reduce the training dataset size requirements, for example <a href="https://arxiv.org/abs/2106.03746">using self-supervision</a>.</p>
+<p>I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>, so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is <strong>not</strong> a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario, so if you find one please mention in the comments section. There are papers that propose innovations to reduce the training dataset size requirements, for example <a href="https://arxiv.org/abs/2106.03746">using self-supervision</a>.</p>
 
 <h2 id="training-difficulty">
 <a class="anchor" href="#training-difficulty" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training difficulty</h2>
-<p>I expect there is a perception that Transformers will be more difficult to train since they are known to require large training datasets when trained from scratch. However if we again consider only fine tuning, is training more difficult than CNN’s? I think this is a hard question to answer since difficulty is a somewhat subjective term, and clearly what is considered difficult today might not be considered difficult in five years time, e.g. due to improvements in hardware performance that massively speed up training cycles. So to flip this question around, how easy can it be to train a vision Transformer? To find out I worked through this post <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a></p>
+<p>If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a></p>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+<p>The use of vision Transformers is an area of active research and providing a summary on the overall state of research would be a research paper in itself, and beyond the scope of this blog post. However I hope this post has provided a useful introduction to the novel features of Transformers, and some insight into the practicality of using them. So should you consider using Transformers in your work any time soon? My own assessment is that people should continue to use CNN’s and only really consider using a Transformer if they require the highest accuracy (for example if entering a competition), have medium to large datasets available, and a prepared for significant time performing experiments.</p>
 
 <h2 id="further-reading">
 <a class="anchor" href="#further-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h2>
@@ -177,10 +180,6 @@ window.onload = wrap_img;
   <li>ArXiv paper: <a href="https://arxiv.org/abs/2207.09238">Formal Algorithms for Transformers</a>
 </li>
 </ul>
-
-<h2 id="summary">
-<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
-<p>The use of vision Transformers is an area of active research and providing a summary on the overall state of research would be a research paper in itself, and beyond the scope of this blog post. However I hope this post has provided a useful introduction to the novel features of Transformers, and some insight into the practicality of using them. So should you consider using Transformers in your work any time soon? My own assessment is that people should continue to use CNN’s and only really consider using a Transformer if they require the highest accuracy (for example if entering a competition), have medium to large datasets available, and a prepared for significant time performing experiments.</p>
 
 <h2 id="terminology">
 <a class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology</h2>
