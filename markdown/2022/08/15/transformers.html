@@ -118,6 +118,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#performance">Performance</a></li>
 <li class="toc-entry toc-h2"><a href="#training-data-requirements">Training data requirements</a></li>
 <li class="toc-entry toc-h2"><a href="#training-difficulty">Training difficulty</a></li>
+<li class="toc-entry toc-h2"><a href="#use-cases">Use cases</a></li>
 <li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
 <li class="toc-entry toc-h2"><a href="#further-reading">Further reading</a></li>
 <li class="toc-entry toc-h2"><a href="#terminology">Terminology</a></li>
@@ -146,7 +147,7 @@ window.onload = wrap_img;
   <li>Do Transformers have the best performance?</li>
   <li>Do they require more training data?</li>
   <li>Are they harder to train?</li>
-  <li>Can they be used for all common remote sensing tasks including classification/segmentation/object detection?</li>
+  <li>Can they be used for classification/segmentation/object detection?</li>
 </ul>
 
 <p>I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.</p>
@@ -165,7 +166,11 @@ window.onload = wrap_img;
 
 <h2 id="training-difficulty">
 <a class="anchor" href="#training-difficulty" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training difficulty</h2>
-<p>If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a> which you can very conveniently open in Google Colab using the shortcut at the start of the post. The tutorial uses a bean dataset but can be adapted to use a remote sensing dataset by setting <code class="language-plaintext highlighter-rouge">dataset = load_dataset("nielsr/eurosat-demo")</code></p>
+<p>If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a> which you can very conveniently open in Google Colab using the shortcut at the start of the post. Training for only 4 epochs on a Colab Pro instance completes very quickly (few mins) and yields a model with high classification accuracy on this admittedly very simple dataset. Based on this experience I have no reason to suspect that fine tuning a ViT will be any more difficult than a CNN, but if you have a different experience please let me know in the comments.</p>
+
+<h2 id="use-cases">
+<a class="anchor" href="#use-cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use cases</h2>
+<p>Vision Transformers clearly excel at classification tasks, but what about other use cases?</p>
 
 <h2 id="summary">
 <a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
