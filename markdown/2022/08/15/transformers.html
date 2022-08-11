@@ -146,6 +146,7 @@ window.onload = wrap_img;
   <li>Do Transformers have the best performance?</li>
   <li>Do they require more training data?</li>
   <li>Are they harder to train?</li>
+  <li>Can they be used for all common remote sensing tasks including classification/segmentation/object detection?</li>
 </ul>
 
 <p>I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.</p>
@@ -164,7 +165,7 @@ window.onload = wrap_img;
 
 <h2 id="training-difficulty">
 <a class="anchor" href="#training-difficulty" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training difficulty</h2>
-<p>If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a></p>
+<p>If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial <a href="https://huggingface.co/blog/fine-tune-vit">Fine-Tune ViT for Image Classification with Huggingface Transformers</a> which you can very conveniently open in Google Colab using the shortcut at the start of the post. The tutorial uses a bean dataset but can be adapted to use a remote sensing dataset by setting <code class="language-plaintext highlighter-rouge">dataset = load_dataset("nielsr/eurosat-demo")</code></p>
 
 <h2 id="summary">
 <a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
