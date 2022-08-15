@@ -6,7 +6,8 @@ categories: [markdown]
 toc: true
 image: images/transformers/transformer.jpg
 show_image: true
-hide: true
+hide: false
+comments: true
 ---
 
 ## Introduction
@@ -29,17 +30,17 @@ To paraphrase the main questions asked:
 - Are they harder to train?
 - Can they be used for classification/segmentation/object detection?
 
-I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevetheless I attempt to answer each of these in turn below.
+I have subsequently come to appreciate there are not definitive answers to these questions, and issues such as performance/dataset size/training complexity are all coupled. Nevertheless I attempt to answer each of these in turn below.
 
 ## Performance
 To begin addressing these questions I will first reference the 2022 paper [Current Trends in Deep Learning for Earth Observation: An Open-source Benchmark Arena for Image Classification](https://arxiv.org/abs/2207.07189). This paper compares the performance of vision Transformers (ViT) with eight other neural network architectures on the task of classification. Figure 1 from that paper is shown below:
 
 ![](https://raw.githubusercontent.com/robmarkcole/blog/master/images/transformers/classification.jpg "Figure 1 from Current Trends in Deep Learning for Earth Observation")
 
-This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that **pre-training almost always improves model performance**, which is a very useful takeaway. Amongst the models, **ViT and DenseNet are the best performers**, although ViT actually performs *worst* on the largest dataset, BigEarthNet. It is also interesting that for many of the datasets, a ResNet achieves comparable performance.
+This paper provides a useful overview of multiple classification datasets, shown in (a) above. The datasets range considerably in number of images and classes. Model performance is compared on (b) multi-label and (c) multi-class classification tasks[^3]. The darker shaded bars are performance when a model is trained from scratch, and the lighter shading bars are performance when the model is pre-trained on the ImageNet-1K dataset. We immediately observe that **pre-training almost always improves model performance**, which is a very useful takeaway. Amongst the models, **ViT and DenseNet are the best performers**, although ViT actually performs *worst* on the largest dataset, BigEarthNet. It is also interesting that for many of the datasets, a ResNet achieves comparable performance.
 
 ## Training data requirements
-I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models[^3], so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is **not** a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario, so if you find one please mention in the comments section. There are papers that propose innovations to reduce the training dataset size requirements, for example [using self-supervision](https://arxiv.org/abs/2106.03746). 
+I think it is a fair assumption that the vast majority of remote sensing users will be using pre-trained models[^4], so I will not discuss any further the requirements for training a ViT from scratch. Referring back to Figure 1, it is clear there is **not** a simple rule of thumb that large data volumes will guarantee better performance with a ViT. A much more likely scenario in practice is that a user has a relatively limited training dataset, and has already trained a CNN and wants to know if it is worth training a ViT. I have actually been unable to find a definitive paper focussing on this scenario, so if you find one please mention in the comments section. There are papers that propose innovations to reduce the training dataset size requirements, for example [using self-supervision](https://arxiv.org/abs/2106.03746). 
 
 ## Training difficulty
 If we again consider only fine tuning, is training a ViT more difficult than a CNN? To gain first hand experience I worked through the tutorial [Fine-Tune ViT for Image Classification with Huggingface Transformers](https://huggingface.co/blog/fine-tune-vit) which I then [modified to use the Eurosat remote sensing dataset](https://nbviewer.org/github/robmarkcole/satellite-imagery-projects/blob/main/ViT_classification/huggingface_ViT_image_classification_eurosat.ipynb). Training can be completed on a free Google Colab instance and yields a model with high classification accuracy on this admittedly very simple dataset. The experience of fine tuning a ViT appears to be similar to fine tuning a CNN, but if you have more experience of training ViT's please let me know in the comments.
@@ -62,6 +63,7 @@ Transformers have achieved state of the art performance on remote sensing classi
 - Original Google [blog post on transformers](https://ai.googleblog.com/2020/12/transformers-for-image-recognition-at.html)
 - Pytorch implementation of a ViT: [vit-pytorch](https://github.com/lucidrains/vit-pytorch)
 - ArXiv paper: [Formal Algorithms for Transformers](https://arxiv.org/abs/2207.09238)
+- [Effect of Attention Mechanism in Deep Learning-Based Remote Sensing Image Processing: A Systematic Literature Review](https://www.mdpi.com/2072-4292/13/15/2965)
 
 ## Terminology
 - CNN: convolutional neural network
@@ -71,4 +73,5 @@ Transformers have achieved state of the art performance on remote sensing classi
 ## Footnotes
 [^1]: https://blogs.nvidia.com/blog/2022/03/25/what-is-a-transformer-model/
 [^2]: image-specific inductive bias: in CNN's the use of kernels bakes in the notion that image pixels are locally correlated and their correlation maps are translation-invariant, whilst a ViT must learn this, [ref](https://keras.io/examples/vision/vit_small_ds/)
-[^3]: For further reading on pre-training see [An Empirical Study of Remote Sensing Pretraining](https://arxiv.org/abs/2204.02825)
+[^3]: Note that multi-class reports accuracy on the target class, whilst multi-label reports the mean average precision (mAP) across labels on the image
+[^4]: For further reading on pre-training see [An Empirical Study of Remote Sensing Pretraining](https://arxiv.org/abs/2204.02825)
