@@ -55,6 +55,7 @@ Vision Transformers clearly excel at classification tasks, but what about other 
 - [Swin-Transformer-Enabled YOLOv5 with Attention Mechanism for Small Object Detection on Satellite Images](https://www.mdpi.com/2072-4292/14/12/2861)
 - [Transformer with Transfer CNN for Remote-Sensing-Image Object Detection](https://www.mdpi.com/2072-4292/14/4/984)
 - [Point Transformer for Shape Classification and Retrieval of Urban Roof Point Clouds](https://ieeexplore.ieee.org/document/9376774)
+- [Multimodal Fusion Transformer for Remote Sensing Image Classification](https://github.com/AnkurDeria/MFT)
 
 ## Summary
 Transformers have achieved state of the art performance on remote sensing classification datasets and look set to make an impact on other common tasks such as segmentation and object detection. I expect that CNN based networks will continue to be the workhorses of remote sensing applications owing to their proven track record and vast documentation. However given the rapid pace of innovation in the deep learning domain I would not be surprised to see Transformers or hybrid Transformer/CNN approaches steadily making their way into applications.
