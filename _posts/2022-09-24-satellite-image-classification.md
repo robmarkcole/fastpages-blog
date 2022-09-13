@@ -22,6 +22,9 @@ If you want to get started training models on a benchmark dataset[^2] I recommen
 
 ![](https://www.researchgate.net/publication/324924412/figure/fig4/AS:644015246544898@1530556608631/Example-images-from-the-UC-Merced-dataset.png "The UC merced dataset")
 
+## Which models are used for classification?
+The [Classification](https://github.com/robmarkcole/satellite-image-deep-learning#classification) section in my repository lists many different models for classification of satellite imagery, but the typically approach is to select a that has been pre-trained on a benchmark dataset (usually Imagenet) and then fine tune this model on your own dataset. The academic literature regularly reports new 'state of the art' models which improve performance on some benchmark dataset or other. However for an up to date and approachable resource comparing models I highly recommend reading the article [The best vision models for fine-tuning](https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning/notebook) by Jeremy Howard. 
+
 
 
 ## Footnotes
