@@ -115,6 +115,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#what-is-image-classification">What is image classification?</a></li>
+<li class="toc-entry toc-h2"><a href="#which-models-are-used-for-classification">Which models are used for classification?</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
@@ -132,6 +133,10 @@ window.onload = wrap_img;
 <p>If you want to get started training models on a benchmark dataset<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> I recommend beginning with either the UC merced dataset (a sample of which is shown below) or the EuroSAT dataset. Both of these datasets are available in the standard RGB/single label format, but also in more interesting multi-class versions. For these and other datasets see the <a href="https://github.com/robmarkcole/satellite-image-deep-learning/blob/master/assets/datasets.md">Datasets</a> section on my repository.</p>
 
 <p><img src="https://www.researchgate.net/publication/324924412/figure/fig4/AS:644015246544898@1530556608631/Example-images-from-the-UC-Merced-dataset.png" alt="" title="The UC merced dataset"></p>
+
+<h2 id="which-models-are-used-for-classification">
+<a class="anchor" href="#which-models-are-used-for-classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Which models are used for classification?</h2>
+<p>The <a href="https://github.com/robmarkcole/satellite-image-deep-learning#classification">Classification</a> section in my repository lists many different models for classification of satellite imagery, but the typically approach is to select a that has been pre-trained on a benchmark dataset (usually Imagenet) and then fine tune this model on your own dataset. The academic literature regularly reports new ‘state of the art’ models which improve performance on some benchmark dataset or other. However for an up to date and approachable resource comparing models I highly recommend reading the article <a href="https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning/notebook">The best vision models for fine-tuning</a> by Jeremy Howard.</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
