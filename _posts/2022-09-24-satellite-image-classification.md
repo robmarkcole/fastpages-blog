@@ -27,6 +27,9 @@ The [Classification](https://github.com/robmarkcole/satellite-image-deep-learnin
 
 ![](images/classification/table.png "The top 10 performers on the Planet dataset")
 
+## Inspiration for your first classification project
+Perhaps you already have a use case for classification in your day job, but if not I suggest selecting a problem that interests you (e.g. deforestation, crop classification) and first finding a related dataset on Kaggle and begin working through some of the notebooks using that dataset. You will probably quickly settle on your preferred deep learning framework (tensorflow, pytorch etc) and can then begin experimenting to see if you can improve on the published results. As shown in the above section, simply selecting a different model can result in improved performance. You can also experiment with data augmentation and hyperparameter tuning of the models. Once you have gained confidence training and tuning a model on this dataset, I recommend creating your own dataset. 
+
 ## Footnotes
 [^1]: When there are **more** than one label to be associated with an image the task is usually referred to as 'multi-class' or 'multi-label' classification. This more complex task is beyond the scope of this post but I aim to revisit in a later post. If you are keen to explore this topic already checkout the Medium article [Multi-label Land Cover Classification with Deep Learning](https://towardsdatascience.com/multi-label-land-cover-classification-with-deep-learning-d39ce2944a3d)
 [^2]: A benchmark dataset is a dataset that is used as a standard by the community to compare the performance of different techniques
