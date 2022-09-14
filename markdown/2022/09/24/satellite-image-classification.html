@@ -96,7 +96,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -116,6 +116,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#what-is-image-classification">What is image classification?</a></li>
 <li class="toc-entry toc-h2"><a href="#which-models-are-used-for-classification">Which models are used for classification?</a></li>
+<li class="toc-entry toc-h2"><a href="#inspiration-for-your-first-classification-project">Inspiration for your first classification project</a></li>
 <li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
 </ul><h2 id="introduction">
 <a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
@@ -136,7 +137,13 @@ window.onload = wrap_img;
 
 <h2 id="which-models-are-used-for-classification">
 <a class="anchor" href="#which-models-are-used-for-classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Which models are used for classification?</h2>
-<p>The <a href="https://github.com/robmarkcole/satellite-image-deep-learning#classification">Classification</a> section in my repository lists many different models for classification of satellite imagery, but the typically approach is to select a that has been pre-trained on a benchmark dataset (usually Imagenet) and then fine tune this model on your own dataset. The academic literature regularly reports new ‘state of the art’ models which improve performance on some benchmark dataset or other. However for an up to date and approachable resource comparing models I highly recommend reading the article <a href="https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning/notebook">The best vision models for fine-tuning</a> by Jeremy Howard.</p>
+<p>The <a href="https://github.com/robmarkcole/satellite-image-deep-learning#classification">Classification</a> section in my repository lists many different models for classification of satellite imagery, but the typically approach is to select a model that has been pre-trained on a benchmark dataset (usually Imagenet) and then fine tune this model on your own dataset. The academic literature regularly reports new ‘state of the art’ models which improve performance on some benchmark dataset or other. For an up to date and approachable resource comparing models I highly recommend reading the article <a href="https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning/notebook">The best vision models for fine-tuning</a> by Jeremy Howard. In this article Jeremy compares 86 models on two benchmark datasets; the <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">IIT Pet dataset</a> and the <a href="https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/data">Kaggle Planet dataset</a> (a remote sensing dataset). He shows that the modern models (convnext and vit) are the top performers, and demonstrates the tradeoff between speed and accuracy which should factor into your decision making when selecting a model. Interestingly the best performers vary between the Pets and Planet datasets, and Jeremy attributes this to the fact that the Planet dataset does not resemble the images in the ImageNet dataset (which the models are pre-trained on), so the models which learn new features the fastest are the best performers on Planet. He also notes that “ there’s little correlation between model size and performance” on the Planet dataset, and advises selecting smaller models due to this (which will be faster in use). An additional advantage of choosing a small model is that the pace of iteration is faster, enabling more experimentation in a given time-frame. A striking result on the Planet dataset is that the ‘classic’ Resnet 18 model is in the top 10 performers (shown below). As Jeremy says, “Resnet 18 has very low memory use, is fast, and is still quite accurate”, and for these reasons I suggest it is a good default model to begin experimentation with.</p>
+
+<p><img src="images/classification/table.png" alt="" title="The top 10 performers on the Planet dataset"></p>
+
+<h2 id="inspiration-for-your-first-classification-project">
+<a class="anchor" href="#inspiration-for-your-first-classification-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inspiration for your first classification project</h2>
+<p>Perhaps you already have a use case for classification in your day job, but if not I suggest selecting a problem that interests you (e.g. deforestation, crop classification) and first finding a related dataset on Kaggle and begin working through some of the notebooks using that dataset. You will probably quickly settle on your preferred deep learning framework (tensorflow, pytorch etc) and can then begin experimenting to see if you can improve on the published results. As shown in the above section, simply selecting a different model can result in improved performance. You can also experiment with data augmentation and hyperparameter tuning of the models. Once you have gained confidence training and tuning a model on this dataset, I recommend creating your own dataset.</p>
 
 <h2 id="footnotes">
 <a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
